@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google font Lexend -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+  </script>
+
+  <!-- Mustache.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+  <!-- Remote Time Scripts -->
+  <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/resources.js" defer></script>
+
+  <title>ITAO 34161 &middot; Deliverables</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div id="navbar" class="bg-grey4"></div>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="breadcrumb" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 pt-3 pb-2">
+          <ol class="breadcrumb rounded-0">
+            <li class="breadcrumb-item active"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+            <li class="breadcrumb-item" aria-current="page">Deliverables</li>
+          </ol>
+        </div>
+        <div class="col-12 col-md-7 pt-4 pb-2">
+          <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Deliverables</p>
+        <hr class="thicker">
+        <p class="page-divider text-center"><span class="page-divider-icon text-center"><i class="fad fa-fw fa-4x fa-presentation" aria-hidden="true"></i></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-0">
+    <div class="row">
+
+      <div class="col-12 col-md-6 offset-md-3">
+        <ul class="nav nav-pills nav-fill" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#team-one-tab" data-toggle="tab">Team 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#team-two-tab" data-toggle="tab">Team 2</a>
+          </li>
+        </ul>
+      </div>
+      <!-- col-12 -->
+
+      <div class="col-12 col-md-12">
+        <hr>
+        <div class="tab-content" id="tab-content-68993267">
+
+          <!-- Slide Deck -->
+          <div class="mt-3 ml-2 tab-pane fade show active" id="team-one-tab" role="tabpanel" aria-labelledby="...">
+
+            <div class="row bg-white rounded-0 border-0 p-4 shadow-sm">
+              <div class="col-12">
+                <h3 class="mt-2 chocolate">Slide Deck</h3>
+                <!-- <p class="lead">These are the essential elements of an impactful chart.</p> -->
+
+                <img src="https://unsplash.it/1000/600" alt="">
+
+              </div>
+              <!-- col -->
+
+            </div>
+          </div>
+
+          <!-- Slide Doc -->
+          <div class="mt-3 ml-2 tab-pane fade show active" id="team-one-tab" role="tabpanel" aria-labelledby="...">
+
+            <div class="row bg-white rounded-0 border-0 p-4 shadow-sm">
+              <div class="col-12">
+                <h3 class="mt-2 chocolate">Slide Doc</h3>
+                <!-- <p class="lead">These are the essential elements of an impactful chart.</p> -->
+
+                <img src="https://unsplash.it/1000/600" alt="">
+
+              </div>
+              <!-- col -->
+
+            </div>
+          </div>
+
+          <!-- content #3  -->
+          <div class="mt-3 ml-2 tab-pane fade" id="team-two-tab" role="tabpanel" aria-labelledby="...">
+
+            <div class="row bg-white rounded-0 border-0 p-4 shadow-sm">
+              <div class="col-12">
+                <h3 class="mt-2 chocolate">Example Redesign</h3>
+                <p class="lead">We redesign this chart for greater impact.</p>
+                <p class="float-right"><a class="bright-blue pointer" role="button" data-toggle="modal" data-target="#modal-redesigned-chart">View the Redesign</a></p>
+
+              </div>
+
+              <div class="col-sm-4 mt-3">
+                <ul class="nav flex-column nav-pills" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#panel32508319" data-toggle="tab">Vague title</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel18088352" data-toggle="tab">Explaining the visual</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel38202185" data-toggle="tab">Proofread failure</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel24301920" data-toggle="tab">Overly wordy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel12702982" data-toggle="tab">Simplify data labels</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel40185727" data-toggle="tab">Correct y-axis</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#panel7255267882" data-toggle="tab">Correct column width</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-8">
+                <div class="tab-content" id="tab-content-60550555">
+                  <div class="mt-3 ml-2 tab-pane fade show active" id="panel32508319" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/title.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>Why diversity is important...to whom? ...In what context? The title is far too vague. If many other slides from the same presentation would fit this title, your title may be too vague or general.</p>
+                      <p>A more specific title might be "Success Delta Comparing Diverse/Non-diverse Teams"</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel18088352" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/explain.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>Your visual should speak for itself. The highlighted text needlessly "explains" a visual chart textually. This highlighted text is closer to what the presenter should say to the audience. By verbalizing the highlighted text,
+                        you may
+                        then use this space for the takeaway message, which is more properly "Ethnically diverse teams experienced a higher success rate for investments."</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel38202185" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/proofread.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>Failing to proofread your work damages your credibility with the audience. It suggests you are either unintelligent or, worse, lazy. Data-rich presentations require close attention to detail. Proofreading carefully will help
+                        people believe and trust your insights.</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel24301920" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/wordy.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>The labels for both columns share essentially all the same words, leading to confusion and increasing the cognitive load on the viewer. Replace them with simple, clear alternatives: "Diverse" and "Non-diverse."</p>
+                      <p><strong>Rule of thumb:</strong> The more text you give the audience to read, the less time they have to listen to you.</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel12702982" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/labels.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>In this instance, because both floating-point integers are within two-tenths of a percentage point, we might consider rounding them down, especially since they're not measuring values like money, which at scale might prove
+                        significant.</p>
+                      <p>In this case, 32% and 24% are easier to read than their fractional counterparts.</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel40185727" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/y-axis.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>The general rule for structuring the y-axis of a bar/column chart will be to ensure the final value on that axis is equal to the value of the next interval beyond the greatest value on the chart.</p>
+                      <p>In this case, the designer should display the next interval established by the chart beyond 32.2%, which would be 40.</p>
+                    </div>
+                  </div>
+                  <div class="mt-3 ml-2 tab-pane fade" id="panel7255267882" role="tabpanel" aria-labelledby="...">
+                    <img src="img/anatomy/column-width.png" class="img-fluid border-left border-top border-right" alt="">
+                    <div class="p-4 bg-grey1 mt-0">
+                      <h5 class="mt-3">Notes</h5>
+                      <p>The columns are too thin for this chart. The space between columns should be half their width. Adjusting width will move them closer together, which will make comparison easier. </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </div>
+      <!-- col-12 -->
+
+    </div>
+    <!-- .row -->
+  </div>
+  <!-- container -->
+
+  <!-- Page footer -->
+  <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+  <!-- Back to top button -->
+  <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+  <!-- Redesigned Chart Modal -->
+  <div class="modal fade" id="modal-redesigned-chart" tabindex="-1" role="dialog" aria-labelledby="modal-redesigned-chart-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h4 class="modal-title chocolate" id="modal-redesigned-chart-title">The Redesigned Chart</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid shadow" src="img/anatomy/redesigned-chart.png" alt="image of redesigned chart">
+          <h5 class="mt-4">Notes</h5>
+          <p>Here, we've clarified the title; corrected the length of the y-axis; corrected the width of and spacing between the columns; replaced the unnecessary explanation of the chart with a simpler, enlarged takeaway; cut down on the wordiness;
+            and added a preattentive attribute to decrease the cognitive load.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Practice Assignment Modal -->
+  <div class="modal fade" id="modal-practice-assignment" tabindex="-1" role="dialog" aria-labelledby="modal-practice-assignment-title" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h4 class="modal-title chocolate" id="modal-practice-assignment-title">The Redesigned Chart</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid shadow" src="img/anatomy-practice/redesigned-practice-chart.png" alt="image of redesigned chart">
+          <h5 class="mt-4">Notes</h5>
+          <p>Here, we've used <code>enclosure</code> to set off the survey question which drives the data. Rather than using a simple period after the "Q" (for question), we added a white bar to its right. The principle of <code>closure</code> helps us to see these two boxes as related. We've removed the unnecessary text "% selecting given attribute," as it's obvious what the scale represents. We've added color as a <code>preattentive attribute</code> to associate our takeaway message with the chart. We've simplified the source area so that it's less prominent &mdash; additional details could be made available in the <code>slidedoc</code>. Lastly, we've used <code>repetition</code> and <code>contrast</code> to emphasize the two less important criteria by shading them a <code>lighter / less saturated</code> blue.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

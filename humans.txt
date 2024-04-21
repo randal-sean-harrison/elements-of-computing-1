@@ -1,0 +1,19 @@
+/* Website Design */
+
+   Project: ITAO 34161 Website
+   Web Design and Development
+
+	Release date: fall, 2021
+
+   Randal Sean Harrison, Ph.D.
+   Website Developer
+	 Employed: Mendoza College of Business, University of Notre Dame
+	 Contact: rharriso @ nd.edu
+
+/* Technologies, Credits  */
+
+   Languages: HTML5, CSS3, Javascript
+   Frameworks: jQuery, Bootstrap 4.3
+   Web Fonts: FontAwesome 5, Google Fonts Lexend
+
+   IDE/Env: Atom.io

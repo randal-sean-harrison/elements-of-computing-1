@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" defer>
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+      defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+      defer></script>
+
+    <!-- Remote Time Scripts -->
+    <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+    <script src="js/main.js" defer></script>
+
+    <title>ITAO 34161 &middot; Assignments</title>
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+    <div id="navbar" class="bg-grey4"></div>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5 pt-3 pb-2">
+            <ol class="breadcrumb rounded-0">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+            </ol>
+          </div>
+          <div class="col-12 col-md-7 pt-4 pb-2">
+            <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame
+              (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Assignments</p>
+          <hr class="thicker">
+          <p class="page-divider text-center"><span class="page-divider-icon text-center"><i
+                class="fad fa-fw fa-4x fa-drafting-compass" aria-hidden="true"></i></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-0">
+      <div class="row">
+
+
+        <div class="col-sm-4">
+          <ul class="nav flex-column nav-pills bg-white p-4" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#assignment-sequence" data-toggle="tab">Overview &mdash; The Scenario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#curating-resources" data-toggle="tab">Curating Resources<span
+                  class="badge badge-alice px-2 ml-2">individual</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reading-checks" data-toggle="tab">Comprehension Checks <span
+                  class="badge badge-alice px-2 ml-2">individual</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#charts-graphs" data-toggle="tab">Charts and Graphs<span
+                  class="badge badge-alice px-2 ml-2">individual</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#slide-design" data-toggle="tab">Slide Deck<span
+                  class="badge badge-alice px-2 ml-2">team</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#slidedoc" data-toggle="tab">SlideDoc<span
+                  class="badge badge-alice px-2 ml-2">team</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#data-dashboard" data-toggle="tab">Data Dashboard<span
+                  class="badge badge-alice px-2 ml-2">team</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#website" data-toggle="tab">Website<span
+                  class="badge badge-alice px-2 ml-2">individual</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#final-project" data-toggle="tab">Final Presentation<span
+                  class="badge badge-alice px-2 ml-2">team</span></a>
+            </li>
+          </ul>
+
+          <p class="mt-3 bg-white p-3"><strong class="chocolate">Team Assigments</strong><br>Each Team Lead will upload
+            final deliverables into his or her personal folder for their team.</p>
+        </div>
+        <div class="col-sm-8">
+          <div class="tab-content" id="tab-content-assignments">
+            <div class="mt-3 ml-2 tab-pane fade show active" id="assignment-sequence" role="tabpanel"
+              aria-labelledby="...">
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Assignments Overview</h4>
+                </div>
+                <div class="card-body mt-n2">
+                  <h5>Our Scenario</h5>
+                  <p>You and your fellow students are part of a newly formed data-analytics team for Innotech, a
+                    Chicago-based data analytics and marketing company which has been asked to recommend a plan to
+                    revitalize South Bend. Recently, <a href="docs/article-journal-labor-economics.pdf">an article in
+                      the Journal of Labor Economics</a> has ranked South Bend as one of the least desirable places to
+                    live&mdash;its citizens <a
+                      href="https://www.southbendtribune.com/story/news/local/2014/08/26/did-south-bend-deserve-the-harvard-ranking/116990278/"
+                      target="_blank">the third most unhappy citizens</a> in the United States. (<a
+                      href="https://www.google.com/search?q=harvard+study+south+bend+least+happy&newwindow=1&sxsrf=ALeKk01oshwfM1Gg1Vl3cjqytS6GKo8iFA%3A1629162719717&source=hp&ei=3wwbYcHnKYvXgQaKnJ-YCQ&iflsig=AINFCbYAAAAAYRsa7z5QazOdxHfpg6onL2JwbscrCM1I&oq=harvard+study+south+bend+least+happy&gs_lcp=Cgdnd3Mtd2l6EAMyBAgjECc6BwgjEOoCECc6DQguEMcBEK8BEOoCECdQ2RJY2RJg2xZoAXAAeACAAVOIAVOSAQExmAEAoAECoAEBsAEK&sclient=gws-wiz&ved=0ahUKEwiB08CJ8LbyAhWLa8AKHQrOB5MQ4dUDCAg&uact=5"
+                      target="_blank">read more</a>)</p>
+
+                  <div class="table-responsive mt-4">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th class="w-50 bg-light">Team 1</th>
+                          <th class="w-50 bg-light">Team 2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Cho Chang (Lead)</td>
+                          <td>Hermione Granger (Lead)</td>
+                        </tr>
+                        <tr>
+                          <td>Ron Weasley</td>
+                          <td>Harry Pottter</td>
+                        </tr>
+                        <tr>
+                          <td>Draco Malfoy</td>
+                          <td>Neville Longbottom</td>
+                        </tr>
+                        <tr>
+                          <td>Luna Lovegod</td>
+                          <td>Ginny Weasley</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+
+                  <p>Innotech specializes in using data to derive business insights for large organizations. Using savvy
+                    research, your team will discover the issues behind these low rankings. Using data visualization and
+                    data storytelling, your team
+                    will create a data-rich presentation for South Bend City Government which outlines a plan to
+                    revitalize South Bend, including action items to enact and areas which merit increased
+                    investigation.</p>
+
+                  <p>If you want to improve life here in South Bend, your team will need to gather and analyze data to
+                    assess what makes South Bend far less happy than other cities. I would suggest you start with the
+                    following resources, but you will
+                    need to draw on additional research beyond these sources. While data sets are useful, don't forget
+                    about news stories and anecdotes which capture the socioeconomic, cultural, and political realities
+                    of life in South Bend.</p>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="docs/world-happiness-report-2020.pdf" target="_blank">World
+                        Happiness Report</a></li>
+                    <li class="list-group-item"><a href="https://datausa.io/profile/geo/south-bend-in/"
+                        target="_blank">Data USA</a></li>
+                    <li class="list-group-item"><a href="https://data-southbend.opendata.arcgis.com/"
+                        target="_blank">South Bend Open Data Project</a></li>
+                    <li class="list-group-item"><a
+                        href="https://southbendin.gov/transparency-and-performance/police-transparency-hub/"
+                        target="_blank">Police Transparency Hub</a></li>
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center bg-lightblue"><small>0</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Curating Resources &amp; Comprehension Checks</strong><br>As each of you work
+                        throughout the semester, you will gather and share at least 1 resource per week that you deem
+                        useful to finding, analyzing, and conveying
+                        data impactfully, on paper or digitally.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>I</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Charts and Graphs</strong><br>Learning to create charts and graphs involves learning
+                        which charts are best for which purpose (exploration vs. explanation), and how to avoid using
+                        unethical or misleading tactics in chart
+                        design. Your team will utilize these insights to produce charts for use in your slide deck.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>II</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Slide Deck</strong><br>An impactful slide deck is more than just presenting raw data.
+                        You must make the data tell a story which engages and moves your audience to action. You'll
+                        learn to apply Gestalt theory to create
+                        powerful individual slides, and to apply narrative theory to
+                        assemble
+                        those slides into a powerful data story&mdash;built, in part, on those charts and graphs you
+                        made in the first assignment.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>III</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Slidedoc</strong><br>An impactful presentation should not typically encourage deep
+                        perusal of the slides. To offer extended exploration of the data is the role of the slidedoc.
+                        We'll examine how to craft a strong
+                        slidedoc to accompany your slide deck.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>IV</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Data Dashboard</strong><br>Some of the most interesting and useful storytelling takes
+                        place in real-time, interactive digital interfaces. You'll learn how to create a data dashboard
+                        in Tableau to enhance the way data
+                        can be used to make meaning on demand. The data dashboard will be a key part of your final
+                        presentation deliverables.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>V</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Website</strong><br>Even a rudimentary understanding of how to create and upload a
+                        simple website will serve anyone in the data-* fields. While working toward your final
+                        presentation, we'll use <a href="https://bootstrapr.io" target="_blank">Bootstrapr.io</a> to
+                        craft
+                        a basic website to embed things like a data dashboard. We'll learn to upload our website to
+                        Github Pages to make it publicly available for free.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card mb-3 shadow-sm border-0 rounded-0 bg-white">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-md-2 d-flex justify-content-center">
+                      <p class="stepwise center-block text-center"><small>VI</small></p>
+                    </div>
+                    <div class="col-12 col-md-10">
+                      <p><strong>Final Presentation</strong><br>Applying the concepts you've learned this semester,
+                        you'll create and deliver an impactful final presentation, which is accompanied by a slidedoc
+                        and a data dashboard.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="mt-3 ml-2 tab-pane fade" id="curating-resources" role="tabpanel" aria-labelledby="...">
+
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Curating Resources</h4>
+
+                </div>
+                <div class="card-body">
+
+                  <p>This weekly deliverable will be part of your participation grade (which is 10% of your grade).
+                    We'll use a Google form to curate useful resources for data-* practitioners. At the end of the
+                    semester, we'll have around 100 resources
+                    we
+                    can take with us!</p>
+
+                  <p class="text-center mt-4">
+                    <a class="btn btn-light rounded-0 mx-0 btn-lg text-primary mt-2 mb-4" role="button"
+                      href="https://docs.google.com/spreadsheets/d/1mAaBhZcI5Gze5yA7hir0PWPm3tDsbqqnl6VJceo2ZDI/edit?resourcekey#gid=1961440678"
+                      target="_blank">View
+                      Submissions</a>
+                    <a class="btn btn-primary rounded-0 btn-lg mx-0 mt-2 mb-4" role="button"
+                      href="https://forms.gle/nQyLsoT3LLVhFHUPA" target="_blank">Submit a Resource</a>
+                  </p>
+
+
+                  <p>Each of you is responsible each week for adding 1 brand new unique resource that might be useful to
+                    a new student/practitioner of the Data-* fields (data science, data visualization, etc.). Check the
+                    Google Sheet before entering
+                    your
+                    resource so that you're adding a unique</em> resource. Resources can be everything from software
+                    tools to just interesting examples of data visualization. Feel free to add as many as you like,
+                    though only 1 resource is required per
+                    week for full points.</p>
+
+                  <p class="alert alert-warning"><strong>Resources Due each Tuesday</strong><br>Make sure to add your
+                    weekly resource(s) before the start of each Tuesday’s class, as that's when I’ll ask you to briefly
+                    share the resource you chose and
+                    why you chose it.</p>
+                </div>
+              </div>
+
+            </div>
+            <div class="mt-3 ml-2 tab-pane fade" id="reading-checks" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Comprehension Checks</h4>
+
+                </div>
+                <div class="card-body">
+
+                  <p>Comprehension Checks are short quizzes due at the beginning of each week that has assigned readings
+                    from the course text books (except week 1). They assess your understanding of the readings for that
+                    week. They are meant to ensure
+                    you're keeping up with the all the new vocabulary and concepts in our
+                    readings, and to solidify and connect that knowledge to your work on previous and future
+                    assignments.</p>
+                  <p>These are worth 15% of your course grade, so take the readings seriously. I will discard your
+                    lowest score in calculating your grade.</p>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="mt-3 ml-2 tab-pane fade" id="charts-graphs" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Charts and Graphs</h4>
+                </div>
+                <div class="card-body">
+                  <p>For this assignment, each of you will complete 1 chart (embedded in a slide from either Powerpoint
+                    or Google Slides) using data you have obtained from your research. The chart-in-slide must be
+                    complete with <a href="anatomy.html">all of the elements</a> we have been discussing this semester.
+                    Any chart type listed on the <a href="chooser.html">Chart Chooser
+                      page</a> is acceptable, except for "Big Single Number."</p>
+                  <p>The data must be real and should reflect issues that you've discovered during your analysis. While
+                    you are not required to use these preliminary slides in your final presentation, and you can expect
+                    to improve them further as
+                    <em>you
+                      improve</em> throughout the semester, you should aim to create slides with real data that you
+                    would include in your final presentation.
+                  </p>
+
+                  <div class="alert alert-warning">
+                    <p><strong><i class="fad fa-exclamation-triangle fa-fw mr-2"></i>Important</strong><br>Each team
+                      member's chart must communicate a different insight/data story.</p>
+                  </div>
+
+                  <p>You'll accompany your chart with <a
+                      href="https://docs.google.com/document/d/1Tq5qtRHvjezETWAyRucstj-lSP_SKEi_PDUfEJ55pJg/preview"
+                      target="_blank">a written explanation of your design choices</a> (design brief). You'll submit
+                    your
+                    finalized chart and design brief to me <a
+                      href="https://drive.google.com/drive/folders/10HCHKZ3qBqZZ2UvD7GbbY4yU25lY2GHI?usp=sharing"
+                      target="_blank">your own individual folders</a> in our course Google drive.</p>
+
+                  <p>View <a
+                      href="https://docs.google.com/document/d/1o2nh5FqSEzMlFYuKpx-6-lREcbpp17LyGenX65F5204/edit?usp=sharing"
+                      target="_blank">the assignment rubric</a>.</p>
+
+                  <h5 class="mb-0 mt-5">My Recommended Approach</h5>
+                  <ul class="list-group list-group-flush mb-4 mt-2">
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Meet in teams to do initial
+                      reading and searching for data sources. Agree on a general approach to the assignment and begin
+                      assigning readings and other duties.
+                    </li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Convene your group to
+                      brainstorm possible solutions. Aim for approximately 3-5 root causes of SB unhappiness indicated
+                      in the data.</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Assign 1 chart per team
+                      member, each communicating a unique insight. Remember &mdash; creating data visualizations is as
+                      much to help <em>you</em> find meaning
+                      as your clients.
+
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="mt-3 ml-2 tab-pane fade" id="slide-design" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Slide Deck</h4>
+                </div>
+                <div class="card-body">
+                  <p>Each team will submit a slide deck that will eventually become the slide deck for your final
+                    presentation. As a team you will need to make decisions about theme, tone, style, structure, etc.
+                  </p>
+
+                  <p>View <a
+                      href="https://docs.google.com/document/d/19W7MVMJvx6XfQhwNlD8oXs2F74ew7vJk0E9Dw0HhLSM/edit?usp=sharing"
+                      target="_blank">the assignment rubric</a>.</p>
+
+                  <p>For this assignment, your slide deck must:</p>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Make best use of Gestalt
+                      design principles</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Employ an impactful
+                      opener/closer</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Support your claims with
+                      data-rich slides</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Be structured as a sparkline
+                      (or "Hero's Journey") in which the audience is the hero</li>
+                  </ul>
+
+                  <p class="mt-3">This assignment is graded collectively&mdash;each team member will receive the same
+                    grade, based on the quality of the slide deck. It is up to each team to determine how many slides
+                    long the slide deck is, and the way
+                    in which each member contributes to the slide deck is up to the group to decide.</p>
+
+                  <p>This assignment should help you develop a strong first iteration of the presentation, a solid first
+                    version of your actual presentation. As such, it should include a storyline, a Big idea and
+                    supporting ideas, as well as the data
+                    to support those ideas. Ensure it's well-crafted and aesthetically appealing, applying the Gestalt
+                    theory you’ve been learning. The realer it is, the better the feedback I can give you in helping you
+                    to revise and expand for the
+                    final version in the final project. Certainly, you will continue to tweak your presentation toward
+                    the end of the semester, but this should be a fully realized first draft.</p>
+
+                  <div class="alert alert-primary">
+                    <p><strong><i class="fad fa-lightbulb-exclamation fa-fw mr-2"></i>Slide Deck Length vs. Presentation
+                        Length</strong><br>The number of slides is never a meaningful measure of presentation length,
+                      since one might give a 10 min
+                      presentation with six slides or sixty, depending on how many seconds the presenter spends on each
+                      slide.</p>
+                  </div>
+
+                  <p>You'll accompany your chart with <a
+                      href="https://docs.google.com/document/d/13BK8XygZkdb1QB4pv-g7F__tRhGAOlkWwMRnQ7Ew0OA/edit?usp=sharing"
+                      target="_blank">a written explanation of your design choices</a> (a 'design brief'), both
+                    of which you'll submit to me in a Google folder.</p>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="mt-3 ml-2 tab-pane fade" id="slidedoc" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Slidedoc</h4>
+                </div>
+                <div class="card-body">
+                  <p>Each team lead will submit a slidedoc on behalf of his or her team that will eventually become the
+                    slidedoc you hand in with your final presentation. The slidedoc is the place for extended research
+                    and analysis &mdash; the
+                    'exploratory', rather than 'explanatory' space. As a team you will need to make decisions about
+                    theme, tone, style, structure, etc. Duarte's templates offer excellent guidance on how to structure
+                    and style the slidedoc.</p>
+
+                  <p>View <a
+                      href="https://docs.google.com/document/d/1zzTmUG7xBb8_stOZYDtOzhMUJ_-2Xx02DMgYNLoDWOU/preview"
+                      target="_blank">the assignment rubric</a>.</p>
+
+                  <p>For this assignment, your slide deck must:</p>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Make best use of Gestalt
+                      design principles</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Make best use of Duarte's
+                      suggested page templates.</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Provide a deeper context and
+                      support your claims with annotated, data-rich charts and graphs</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Each slidedoc should have the
+                      following elements:
+                      <ul class="mt-2 ml-3">
+                        <li>Cover page</li>
+                        <li>Table of contents</li>
+                        <li>Executive Summary (expressing the big idea)</li>
+                        <li>Slide listing the team members (with imagined titles)</li>
+                        <li>Data-rich slides supporting your claims</li>
+                        <li>Impactful images</li>
+                        <li>Delineated sections</li>
+                        <li>Summary and Recommendation slide</li>
+                        <li>Resource/references slide</li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <p class="mt-3"><em>The slidedoc requires no design brief.</em></p>
+                  <p>Your team lead will submit it on behalf of the team by uploading it to the appropriate Google
+                    folder.</p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3 ml-2 tab-pane fade" id="data-dashboard" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Data Dashboard</h4>
+                </div>
+                <div class="card-body">
+
+                  <p>Each team lead will submit a link to a data dashboard on behalf of his or her team that will
+                    eventually become the data dashboard you present in your final presentation. The power of a
+                    dashboard is the
+                    interconnectedness of the data, the way in which dashboard interface controls enable the audience to
+                    make new meaning on demand by adjusting values, but the point of a dashboard is to monitor data
+                    at-a-glance. You will use Tableau
+                    to create your dashboard and provide me the link to it live, when you submit. As a team you will
+                    need to work together to decide on which insights the dashboard will contain and how they are
+                    arranged.</p>
+
+                  <p>View <a
+                      href="https://docs.google.com/document/d/1P4rOqc9IeO92ioRaF-BbI-IqH68mO7b54hWHLLNHAY0/edit?usp=sharing"
+                      target="_blank">the assignment rubric</a>.</p>
+
+                  <p>For this assignment, your data dashboard must:</p>
+
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Make best use of Gestalt
+                      design principles</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Offer simple insights
+                      (explanatory) which can also help the viewer make new meaning (exploratory), through the use of
+                      tooltips, etc.</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>Contain at least 4
+                      insights/charts</li>
+                  </ul>
+
+                  <p class="mt-3">The dashboard requires no design brief.</p>
+                  <p>Each team lead must email the link to your public dashboard to your instructor to submit the
+                    assignment.</p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3 ml-2 tab-pane fade" id="website" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Website</h4>
+                </div>
+                <div class="card-body">
+                  <p>The ability to create an
+                    impactful static website will serve you well in industry, where many people lack even basic web
+                    skills. We will work together during class periods to learn how to create an impactful static
+                    website and upload it to Github pages for
+                    free. </p>
+                  <p>There is no formal assignment or deliverable for the website section of the course. While these are
+                    valuable skills, this section of the course is also designed to offer you extra time to prepare for
+                    your final presentation.</p>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div class="mt-3 ml-2 tab-pane fade" id="final-project" role="tabpanel" aria-labelledby="...">
+
+              <div class="card bg-white border-0 rounded-0 p-2">
+                <div class="card-header bg-white border-0">
+                  <h4 class="chocolate mt-0">Final Presentation</h4>
+                </div>
+                <div class="card-body">
+                  <p>Imagine the final presentation as a presentation to a small group of department heads from the
+                    South Bend city government. The city has contracted with your firm to perform data-intensive
+                    research on the question of how to make
+                    South Bend a happier place to live. </p>
+                  <p>Your team will present your findings through several deliverables:</p>
+
+                  <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>A formal presentation (and
+                      accompanying slide deck)</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>A slidedoc</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>A Tableau data dashboard</li>
+                    <li class="list-group-item"><i class="fad fa-check mr-3 chocolate"></i>A design brief (see below)
+                    </li>
+                  </ul>
+
+                  <p>Each team lead will submit these to their "Final Presentation Deliverables" folder on behalf of his
+                    or her team.</p>
+
+                  <p class="mt-3">The final presentation requires a short design brief which describes only the
+                    difference between what you turned in earlier and what you're turning in for the final. Explain what
+                    you have revised and why.</p>
+
+                  <p>View <a
+                      href="https://docs.google.com/document/d/1mGFRzbD8hphfKgEqL2kwycPr5kKqKH3XpNcvEUSX4Yk/edit?usp=sharing"
+                      target="_blank">the assignment rubric</a>.</p>
+
+
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          <!-- tab-content -->
+        </div>
+        <!-- col -->
+
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- container -->
+
+    <!-- Page footer -->
+    <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+    <!-- Back to top button -->
+    <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+  </body>
+
+</html>

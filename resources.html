@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+  <title>ITAO 34161 &middot; Resources</title>
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div id="navbar" class="bg-grey4"></div>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="breadcrumb" class="bg-light-gray">
+    <div class="container">
+      <ol class="breadcrumb rounded-0 py-3">
+        <li class="breadcrumb-item"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Resources</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Resources</p>
+        <hr class="thicker">
+        <p class="page-divider text-center"><span class="page-divider-icon text-center"><i class="fad fa-fw fa-4x fa-tools" aria-hidden="true"></i></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-0">
+    <div class="row">
+
+      <div class="col-12 mb-4 mt-n5 d-flex justify-content-end">
+        <p class="d-none"><button type="button" class="btn btn-primary mr-1" id="toggle-favorites">Show Favorites</button>
+          <button type="button" class="btn btn-default text-light" data-toggle="tooltip" title="Clear favorites" data-placement="right" id="clear-favorites"><i class="fad fa-sync-alt fa-lg text-primary" aria-hidden="true"></i></button>
+        </p>
+
+        <p class="text-center text-md-right">
+          <button type="button" class="btn btn-default mr-1" data-url="https://docs.google.com/spreadsheets/d/1mAaBhZcI5Gze5yA7hir0PWPm3tDsbqqnl6VJceo2ZDI/edit?resourcekey#gid=1961440678" data-target="_blank" data-toggle="tooltip"
+            title="Check Submissions" data-placement="top"><i class="fad fa-search fa-lg bright-blue" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-primary text-light" data-url="https://forms.gle/nQyLsoT3LLVhFHUPA" data-target="_blank" data-toggle="tooltip" title="Suggest a Resource" data-placement="top">Submit</button>
+        </p>
+      </div>
+
+      <!-- search -->
+      <div class="col-12 bg-white pt-3 pb-1 shadow-sm">
+
+        <div class="form-group border-0">
+          <div class="input-group border-0">
+            <div class="input-group-prepend bg-white">
+              <span class="input-group-text border-0 trench-blue"></span>
+            </div>
+            <input type="text" class="form-control text-large form-control-lg trench-blue bg-white border-0" placeholder="Search ..." aria-label="" name="search-input" id="search-input">
+            <div class="input-group-append">
+              <span class="input-group-text border-0" data-toggle="tooltip" title="Clear search" data-placement="left" id="reset-resources"><i class="fad fa-fw fa-sync-alt pointer bright-blue fa-2x"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-12">
+
+        <p class="py-2 mt-4 text-center" id="filter-buttons">
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary active" id="all">All</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="course">Course</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="data">Data</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="language">Language</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="plugin">Plugin</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="library">Software Library</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="tool">Tool</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="texts">Texts</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="tutorial">Tutorial</a>
+          <a role="button" class="pointer bright-blue mb-2 shadow-sm btn btn-primary" id="visualization">Visualization</a>
+        </p>
+
+      </div>
+
+      <div class="col-12">
+        <!-- write the links here on-the-fly -->
+        <div id="links" class="mt-5">
+        </div>
+
+        <script id="all-the-links" type="text/template">
+
+          {{#resources}}
+            <div class="card p-2 bg-white border-0 rounded-0 {{{type}}} mt-4 shadow-sm" data-resourceid="{{{resourceid}}}" id="{{{resourceid}}}">
+              <div class="card-header bg-white border-0">
+                <p class="float-right pb-0 d-none"><span class="favorite-this pointer" data-toggle="tooltip" data-placement="left" title="Favorite this"><i class="far fa-star fa-fw fa-lg text-primary"></i></span></p>
+                <h5 class="bright-blue"><a class="bright-blue" href="{{{link}}}" target="_blank">{{name}}</a></h5>
+              </div>
+              <!-- card-header -->
+              <div class="card-body pt-0 data-resource-type='{{{type}}}'">
+                <p>{{description}}</p>
+                <span class="badge p-2 bg-graphite text-light opacity-50 weight-400"> {{type}} </span>
+              </div>
+            </div>
+          {{/resources}}
+
+        </script>
+
+      </div>
+
+    </div>
+    <!-- .row -->
+  </div>
+  <!-- container -->
+
+  <!-- Page footer -->
+  <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+  <!-- Back to top button -->
+  <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+
+  <!-- Mustache.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <!-- Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <!-- Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Remote Time Scripts -->
+  <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+  <!-- local js -->
+  <script src="js/main.js"></script>
+  <script src="js/resources.js"></script>
+
+
+</body>
+
+</html>

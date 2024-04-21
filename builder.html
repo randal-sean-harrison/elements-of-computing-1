@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+  <!-- Remote Time Scripts -->
+  <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/chooser.js" defer></script>
+
+  <title>ITAO 34161 &middot; Chart Chooser</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div id="navbar" class="bg-grey4"></div>
+
+  <!-- Breadcrumbs -->
+<nav aria-label="breadcrumb" class="bg-light-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 pt-3 pb-2">
+        <ol class="breadcrumb rounded-0">
+          <li class="breadcrumb-item active"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+          <li class="breadcrumb-item" aria-current="page">Presentation Builder</li>
+        </ol>
+      </div>
+      <div class="col-12 col-md-7 pt-4 pb-2">
+        <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Chart Chooser</p>
+        <hr class="thicker">
+        <p class="page-divider text-center"><span class="page-divider-icon text-center"><i class="fad fa-fw fa-4x fa-analytics" aria-hidden="true"></i></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-0">
+    <div class="row">
+
+      <!-- search -->
+      <div class="col-8 offset-2 bg-white pt-3 pb-1 shadow-sm">
+
+        <div class="form-group border-0">
+          <div class="input-group border-0">
+            <div class="input-group-prepend bg-white">
+              <span class="input-group-text border-0 trench-blue"><i class="fad fa-fw fa-search fa-2x"></i></span>
+            </div>
+            <input type="text" class="form-control form-control-lg trench-blue bg-white border-0" placeholder="Search ..." aria-label="" name="search-input" id="search-input">
+            <div class="input-group-append">
+              <span class="input-group-text border-0" id="reset-resources"><i class="fad fa-fw fa-sync-alt pointer bright-blue fa-2x"></i></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-12">
+
+        <p class="px-5 mt-4 mb-6 text-center" id="filter-buttons">
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary active" id="all">all</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="explore">EXPLORE</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="explain">EXPLAIN</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="time">TIME</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="space">SPACE</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="comparison">COMPARISON</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="etc2">ETC</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="etc">ETC</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="line">ETC</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="bar">bar/column</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="donut">donut</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="dot">dot/lollipop</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="line">line</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="map">map</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="pie">pie</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="sankey">Sankey</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="scatter">scatter</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="singleton">singleton</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="slope">slope</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="time">time</a>
+          <a role="button" class="mb-3 text-larger pointer shadow-sm bright-blue btn btn-primary" id="yowsa">yowsa!</a>
+        </p>
+
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Area Graph" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Area Graph</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Back-to-back Population Pyramid" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Back-to-back Population Pyramid</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Bar and Line Comparison" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Bar and Line Comparison</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Bar Chart" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Bar Chart</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Bar Chart, Stacked" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Bar Chart, Stacked</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Bullet Graph" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Bullet Graph</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Choropleth Map" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Choropleth Map</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Dashboard" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Dashboard</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Deviation Bar Graph" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Deviation Bar Graph</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Donut Chart" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Donut Chart</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Dot Plot" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Dot Plot</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Connected Dot Plot" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Dot Plot, Connected</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Flow Chart" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Flow Chart</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Four-up Charts" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Four-up Charts</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Hex/Tile Map" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Hex/Tile Map</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Icon Array" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Icon Array</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Line Graph" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Line Graph</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Lollipop" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Lollipop</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Nested Map" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Nested Map</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Overlapping Bars" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Overlapping Bars</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Pie Chart" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Pie Chart</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Sankey Diagram" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Sankey Diagram</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Side-by-side Columns" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Side-by-side Columns</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Singleton" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Singleton</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Slope Graph" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Slope Graph</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Timeline" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Timeline</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Tree Map" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Tree Map</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div data-title="Waterfall" data-description="Lorem ipsum dolor." data-image="https://unsplash.it/600/400" class="read-more card shadow-sm border-0 mb-5 pointer">
+          <img src="img/chart-thumbs/chart.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="chocolate">Waterfall</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, fugiat!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="pb-3 border-top-0 list-group-item bright-blue pointer">Learn More...</li>
+          </ul>
+        </div>
+        <!-- card -->
+      </div>
+      <!-- col -->
+
+    </div>
+    <!-- .row -->
+  </div>
+  <!-- container -->
+
+  <!-- Page footer -->
+  <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+  <!-- Back to top button -->
+  <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+  <div class="modal fade border-0 shadow-sm rounded-0" id="modal-chart-description" tabindex="-1" role="dialog" aria-labelledby="modal-chart-description-title" aria-hidden="true">
+    <div class="border-0 shadow-sm modal-dialog modal-xl modal-scrollable modal-dialog-centered" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-header border-0">
+          <h3 class="chocolate modal-chart-description-title" id="modal-title">Modal title</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><i class="fal fa-fw fa-lg bright-blue fa-times-circle"></i></span>
+          </button>
+        </div>
+        <div class="modal-body border-top-0">
+
+          <div class="row">
+            <div class="col-12 col-md-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dignissimos dolor dolore tempore quia harum in officia hic. Dolore in libero incidunt veritatis fuga eum assumenda numquam perferendis suscipit
+              odit!</div>
+            <div class="col-12 col-md-7"><img id="modal-image" class="img-fluid shadow-sm" src="" alt="image of current chart">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+      defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+      defer></script>
+
+    <!-- Remote Time Scripts -->
+    <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+    <script src="js/main.js" defer></script>
+
+    <style>
+      @media screen and (max-width: 950px) {
+
+        .jumbotron {
+          display: none;
+        }
+
+        .mobile-menu {
+          display: block !important;
+        }
+
+        #action-cards {
+          display: none;
+        }
+
+        .navbar-toggler {
+          display: none;
+        }
+
+
+        #icon-at-top {
+          display: none;
+        }
+
+      }
+    </style>
+
+
+    <title>ITAO 34161 &middot; Dashboard</title>
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+    <div id="navbar" class="bg-grey4"></div>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron rounded-0 mb-0">
+      <div class="container">
+        <p class="display-4 mb-1 text-white"><strong>conveying visual data insights</strong></p>
+        <p class="display-7 text-light mb-4 opacity-75">Dr. Randal Sean Harrison</p>
+        <p class="text-light lead">Tues + Thurs 1 - 2:15 pm EST / Zoom</p>
+      </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5 pt-3 pb-2">
+            <ol class="breadcrumb rounded-0">
+              <li class="breadcrumb-item active"><a href="index.html"><i
+                    class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+              <li class="breadcrumb-item d-none" aria-current="page">Assignments</li>
+            </ol>
+          </div>
+          <div class="col-12 col-md-7 pt-4 pb-2">
+            <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame
+              (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12" id="icon-at-top">
+          <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Course Dashboard</p>
+          <hr class="thicker">
+          <p class="page-divider text-center"><span class="page-divider-icon text-center"><i
+                class="fad fa-fw fa-4x fa-home" aria-hidden="true"></i></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-0">
+
+      <div class="mobile-menu mt-n5 d-none">
+
+        <ul class="list-group ">
+          <a class="list-group-item" href="syllabus.html"><i class="fad mr-3 opacity-50 fa-fw fa-clipboard-list-check"
+              aria-hidden="true"></i>Syllabus</a>
+          <a class="list-group-item" href="assignments.html"><i class="fad fa-fw mr-3 opacity-50 fa-drafting-compass"
+              aria-hidden="true"></i>Assignments</a>
+          <a class="list-group-item" href="calendar.html"><i class="fad fa-fw mr-3 opacity-50 fa-calendar-alt"
+              aria-hidden="true"></i>Calendar</a>
+          <a class="list-group-item" href="https://canvas.nd.edu/courses/29463/gradebook" target="_blank"><i
+              class="fad fa-fw mr-3 opacity-50 fa-sort-amount-down" aria-hidden="true"></i>Grades</a>
+          <a class="list-group-item" href="https://calendly.com/randal-sean-harrison/consultation" target="_blank"><i
+              class="fad fa-fw mr-3 opacity-50 fa-calendar-plus" aria-hidden="true"></i>Book Office Hours</a>
+          <a class="list-group-item"
+            href="https://notredame.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=39bfef25-b57c-423d-9cc5-ad94014aac66"
+            target="_blank"><i class="fad fa-fw mr-3 opacity-50 fa-webcam" aria-hidden="true"></i>Recordings</a>
+          <a class="list-group-item" href="https://drive.google.com/drive/folders/10HCHKZ3qBqZZ2UvD7GbbY4yU25lY2GHI"
+            target="_blank"><i class="fad fa-fw mr-3 opacity-50 fa-folder-open" aria-hidden="true"></i>Files</a>
+          <a class="list-group-item" href="https://randal-sean-harrison.github.io/text-is-visual/"><i
+              class="fad fa-fw mr-3 opacity-50 fa-stream" aria-hidden="true"></i>Text is Visual</a>
+          <a class="list-group-item" href="https://chart-checker.com" target="_blank"><i
+              class="fad fa-fw mr-3 opacity-50 fa-microscope" aria-hidden="true"></i>Chart Checker</a>
+          <a class="list-group-item" href="anatomy.html"><i class="fad fa-fw mr-3 opacity-50 fa-chart-pie"
+              aria-hidden="true"></i>Chart Anatomy</a>
+          <a class="list-group-item" href="chooser.html"><i class="fad fa-fw mr-3 opacity-50 fa-analytics"
+              aria-hidden="true"></i>Chart Chooser</a>
+          <a class="list-group-item" href="builder.html"><i class="fad fa-fw mr-3 opacity-50 fa-presentation"
+              aria-hidden="true"></i>Presentation Builder</a>
+          <a class="list-group-item" href="resources.html"><i class="fad fa-fw mr-3 opacity-50 fa-tools"
+              aria-hidden="true"></i>Data-* Resources</a>
+        </ul>
+
+
+      </div>
+
+
+      <div class="row mt-0" id="action-cards">
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="syllabus.html" data-target="_self">
+            <div class="card-header bg-honeydew bg-grey2 text-light text-center py-5"><i
+                class="fad fa-5x fa-fw fa-clipboard-list-check" aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Syllabus</h4>
+              <p>Policies and other requirements for the course</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="assignments.html" data-target="_self">
+            <div class="card-header bg-honeydew bg-grey2 text-light text-center py-5"><i
+                class="fad fa-fw fa-5x fa-drafting-compass" aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Assignments</h4>
+              <p>Descriptions of the various course assignments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="calendar.html" data-target="_self">
+            <div class="card-header bg-honeydew bg-grey2 text-light text-center py-5"><i
+                class="fad fa-fw fa-5x fa-calendar-alt" aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Calendar</h4>
+              <p>The weekly calendar for course readings and assignments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://canvas.nd.edu/courses/29463/gradebook" data-target="_blank">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-sort-amount-down"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Grades</h4>
+              <p>A link to recorded grades in Canvas for all assignments</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://calendly.com/randal-sean-harrison/consultation" data-target="_blank">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-calendar-plus"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Book Office Hours</h4>
+              <p>Book office hours with me for you or your team</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://notredame.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=39bfef25-b57c-423d-9cc5-ad94014aac66"
+            data-target="_blank">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-webcam"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Recordings</h4>
+              <p>A link to recordings of the virtual class sessions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://drive.google.com/drive/folders/10HCHKZ3qBqZZ2UvD7GbbY4yU25lY2GHI?usp=sharing"
+            data-target="_blank">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-folder-open"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Files</h4>
+              <p>A link to a Google folder with files for the course</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 d-none">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="deliverables.html" data-target="_self">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-presentation"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Deliverables</h4>
+              <p>A link to a all team deliverables for the course</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://randal-sean-harrison.github.io/rollcall/" data-target="_blank">
+            <div class="card-header bg-grey2 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-dice-d20"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Roll Call</h4>
+              <p>A quick way to randomize a selection of students</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm"
+            data-url="https://randal-sean-harrison.github.io/text-is-visual/" data-target="_blank">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-stream"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Text is Visual</h4>
+              <p>Gestalt design principles apply to 'simple' text, too</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="anatomy.html" data-target="_self">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-chart-pie"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Chart Anatomy</h4>
+              <p>Defining the essential elements of impactful charts</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="https://chart-checker.com"
+            data-target="_blank">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-microscope"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Chart Checker</h4>
+              <p>Test your skills in recognizing misleading and unethical tactics</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 d-none">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="chooser.html" data-target="_self">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-analytics"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Chart Chooser</h4>
+              <p>Use the right chart for the right reason with right audience</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 d-none">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="builder.html" data-target="_self">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-presentation"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Presentation Builder</h4>
+              <p>Wireframe your presentation with these slide templates</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="card mb-5 pointer border-0 rounded-0 shadow-sm" data-url="resources.html" data-target="_self">
+            <div class="card-header bg-grey3 text-light text-center py-5"><i class="fad fa-fw fa-5x fa-tools"
+                aria-hidden="true"></i></div>
+            <div class="card-body py-5 px-4">
+              <h4 class="chocolate">Data-* Resources</h4>
+              <p>Interesting and useful resources in the data-* fields</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+
+    <!-- Page footer -->
+    <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+    <!-- Back to top button -->
+    <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+    <script>
+
+      alert("This is not meant to point to an ELEMENTS OF COMPUTING I course.\n\nThis is just an example of a website for a course I taught previously, although the ELEMENTS OF COMPUTING I course website would be quite similar.");
+
+    </script>
+
+
+  </body>
+
+</html>

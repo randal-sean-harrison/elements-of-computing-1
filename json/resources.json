@@ -1,0 +1,641 @@
+{
+  "resources": [{
+      "name": "Statista",
+      "link": "https://www.statista.com/",
+      "description": "Statista is essentially a statistics data library and a leading provider of market and consumer data. Statista.com consolidates statistical data and research reports on over 80,000 topics from more than 22,500 sources and provides insights and facts across 170 industries and over 150 countries.",
+      "resourceid": "1",
+      "type": "data"
+    },
+    {
+      "name": "Flourish Studio",
+      "link": "https://flourish.studio/",
+      "description": "A data visualization tool that offers a large variety of visualizations including ones that are animated. It also offers 'stories' which are like advanced PowerPoints that allow you to connect together multiple visualizations in a dynamic, creative way.",
+      "resourceid": "2",
+      "type": "tool"
+    },
+    {
+      "name": "Slope Graph Excel Template",
+      "link": "http://storytellingwithdata.com/slopegraph-template",
+      "description": "Excel doesn't easily create slope graphs. Cole Nussbaumer Knaflic provides a template for creating these.",
+      "resourceid": "3",
+      "type": "tool"
+    },
+    {
+      "name": "Bootstrapr",
+      "link": "https://bootstrapr.io",
+      "description": "A website for building and customizing bespoke Bootstrap 3 and Bootstrap 4 components and pages. Power-up your Bootstrap-based third-party app with individual components or make an entire site in minutes!",
+      "resourceid": "4",
+      "type": "tool"
+    },
+    {
+      "name": "Canva",
+      "link": "https://www.canva.com/",
+      "description": "Canva allows you to easily create graphics to convey data. The prebuilt icons, logos, charts, and slide templates make it easy to create a visually appealing presentation.",
+      "resourceid": "5",
+      "type": "tool"
+    },
+    {
+      "name": "Datawrapper",
+      "link": "https://www.datawrapper.de/",
+      "description": "Datawrapper allows you to enrich your stories through the use of interactive and responsive charts, maps, and tables. You simple copy & paste your data, edit the chart, then embed or download the responsive code.",
+      "resourceid": "6",
+      "type": "tool"
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "description": "Figma is a free, collaborative design space that allows team users to brainstorm, design, and prototype all in real time. It is useful for connecting ideas and for forming links, while working in a team.",
+      "resourceid": "7",
+      "type": "tool"
+    },
+    {
+      "name": "The Data Visualization Catalogue",
+      "link": "https://datavizcatalogue.com/index.html",
+      "description": "A website which catalogues various graph and diagram formats while providing helpful descriptions, anatomies, and tips for using each type.",
+      "resourceid": "8",
+      "type": "visualization"
+    },
+    {
+      "name": "The Wall Street Journal Guide to Information Graphics",
+      "link": "https://www.amazon.com/Street-Journal-Guide-Information-Graphics/dp/0393347281",
+      "description": "A reference work by a student of Edward Tufte for students and practitioners or data visualization. It details best practices of choosing the most effective chart, and using color and other design elements for maximum impact.",
+      "resourceid": "9",
+      "type": "texts"
+    },
+    {
+      "name": "Data Camp",
+      "link": "https://learn.datacamp.com/",
+      "description": "A platform for data-* field courses crossing all the stages of working with data, including courses in info literacy, finance, languages (SQL, R, Python, etc.), frameworks and libraries (tidyverse), analytics, machine learning, big data, and more.",
+      "resourceid": "10",
+      "type": "course"
+    },
+    {
+      "name": "Command Line Essentials: Absolute Basics",
+      "link": "https://www.youtube.com/watch?v=pjnXeM28Iwo",
+      "description": "A very first command line interface tutorial with excellent and clear explanations.",
+      "resourceid": "11",
+      "type": "tutorial"
+    },
+    {
+      "name": "Information is Beautiful",
+      "link": "https://informationisbeautiful.net/",
+      "description": "A website which curates links to interesting examples of data visualization, and offers links to books and online training, as well.",
+      "resourceid": "12",
+      "type": "visualization"
+    },
+    {
+      "name": "D3.js",
+      "link": "https://d3js.org/",
+      "description": "D3.js is a very flexible javascript-based data visualization library that follows a data-driven approach to web browser DOM manipulation. It helps bring data to life using HTML, SVG, and CSS. It emphasizes web standards and has full support for all modern browsers.",
+      "resourceid": "13",
+      "type": "library"
+    },
+    {
+      "name": "HTML Color Codes",
+      "link": "https://htmlcolorcodes.com/color-names/",
+      "description": "A website with tools for working with color, including named colors, gradients, and color, RGB to Hex converters, tutorials and other resources.",
+      "resourceid": "14",
+      "type": "tool"
+    },
+    {
+      "name": "R",
+      "link": "https://www.r-project.org/",
+      "description": "R is a robust free and open source, interpreted, multi-paradigm language. It is also as a software environment for data science, data visualization, statistical computing and graphics. It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.",
+      "resourceid": "15",
+      "type": "language"
+    },
+    {
+      "name": "data.gov",
+      "link": "https://data.gov",
+      "description": "Data.gov offers datasets, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.",
+      "resourceid": "16",
+      "type": "data"
+    },
+    {
+      "name": "Slagsmålsklubben",
+      "link": "https://vimeo.com/3514904",
+      "description": "A visualization created as a school assignment by Tomas Nilsson to reinterpret the fairytale Little Red Riding Hood. With music inspired by Röyksopps Remind Me.",
+      "resourceid": "17",
+      "type": "visualization"
+    },
+    {
+      "name": "Flourish Public",
+      "link": "https://flourish.studio/",
+      "description": "A data visualization tool that offers a large variety of visualizations including ones that are animated. It also offers 'stories' which are like advanced PowerPoints that allow you to connect together multiple visualizations in a dynamic, creative way.",
+      "resourceid": "19",
+      "type": "tool"
+    },
+    {
+      "name": "Statista",
+      "link": "https://www.statista.com/",
+      "description": "Statista is essentially a statistics data library and a leading provider of market and consumer data. Statista.com consolidates statistical data and research reports on over 80,000 topics from more than 22,500 sources and provides insights and facts across 170 industries and over 150 countries. ",
+      "resourceid": "20",
+      "type": "tool"
+    },
+    {
+      "name": "W3 Schools",
+      "link": "https://www.w3schools.com/",
+      "description": "W3 School provides a tutorial for beginners in web development. It lists many frequently used HTML tags, CSS styles, etc. and has 'try it yourself' feature to learn interactively.",
+      "resourceid": "21",
+      "type": "tutorial"
+    },
+    {
+      "name": "Google Trends",
+      "link": "https://trends.google.com/trends/?geo=US",
+      "description": "Extensive data and detailed visualizations of Google search trends and search history in the United States and the world.",
+      "resourceid": "22",
+      "type": "data"
+    },
+    {
+      "name": "IBIS World",
+      "link": "https://eresources.library.nd.edu/databases/ibis",
+      "description": "IBIS World allows you to view industry research reports on thousands of different global industries.",
+      "resourceid": "23",
+      "type": "tool"
+    },
+    {
+      "name": "Infogram",
+      "link": "https://infogram.com/?utm_source=visualoop&utm_medium=header&utm_campaign=create",
+      "description": "Infogram allows you to create engaging infographics, reports, and data visualizations in mere minutes. Infographic has many pre-made designer templates, allows you to collaborate with colleagues on visuals in real time, and creates interactive visualizations that can be added to any website.",
+      "resourceid": "24",
+      "type": "tool"
+    },
+    {
+      "name": "Adobe Helpx for Illustrator Charts",
+      "link": "https://helpx.adobe.com/illustrator/using/graphs.html",
+      "description": "This webpage provides step by step instructions as to how one can create and modify graphs using illustrator. It lays out the foundational chart designing method on illustrator which helps one get started.",
+      "resourceid": "25",
+      "type": "tool"
+    },
+    {
+      "name": "Vox Data Storytelling Playlist",
+      "link": "https://www.youtube.com/playlist?list=PLMQnPmcYlxNsOPIZpfaAQgX_ZjSiWwCFH",
+      "description": "I created a playlist of videos from a news-like channel called Vox. They like to use simple charts to explain complex concepts, problems, and solutions as well as make videos about how charts can be misleading.",
+      "resourceid": "26",
+      "type": "visualization"
+    },
+    {
+      "name": "Seaborn",
+      "link": "https://seaborn.pydata.org/examples/index.html",
+      "description": "Seaborn is a beginner-friendly Python data visualization library. It provides a high-level interface for drawing attractive and informative statistical graphics.",
+      "resourceid": "27",
+      "type": "library"
+    },
+    {
+      "name": "Google Data Studio",
+      "link": "https://marketingplatform.google.com/about/data-studio/",
+      "description": "Google Data Studio is designed to help developers build, design, and use interactive, compelling data visualizations and data dashboards that can be shared among team members.",
+      "resourceid": "28",
+      "type": "tool"
+    },
+    {
+      "name": "Piktochart",
+      "link": "https://piktochart.com/templates/",
+      "description": "Website offering templates for design of infographics, presentations, etc. and data visualization tools for various graphs and charts.",
+      "resourceid": "29",
+      "type": "tool"
+    },
+    {
+      "name": "Free Online OCR",
+      "link": "https://www.onlineocr.net/",
+      "description": "This resource allows you to convert a pdf to a word document, excel document, or a plain text file. Great for extracting data from online tables and pdfs!",
+      "resourceid": "30",
+      "type": "tool"
+    },
+    {
+      "name": "Visualising Data",
+      "link": "https://www.visualisingdata.com/resources/",
+      "description": "Visualising Data is a website created by award-winning data visualization author Andy Kirk that tracks the development of the data visualization field. Kirk writes many blog posts that keep users up to date on new data visualization tools, and maintains an extensive resources page with descriptions of hundreds of useful data visualization tools.",
+      "resourceid": "31",
+      "type": "visualization"
+    },
+    {
+      "name": "Simply Analytics",
+      "link": "https://app-simplyanalytics-com.proxy.library.nd.edu/",
+      "description": "The SimplyAnalytics database helps users find data easily by any location in the country and create data visualisations . It also has numerous categorical data variables that one can sort and filter data by.",
+      "resourceid": "32",
+      "type": "library"
+    },
+    {
+      "name": "FRED Economic Data",
+      "link": "https://fred.stlouisfed.org/",
+      "description": "FRED allows you to look at a variety of economic data sets both domestically and internationally. It is great for discovering any sort of economic data.",
+      "resourceid": "33",
+      "type": "data"
+    },
+    {
+      "name": "Data Science and the Art of Persuasion",
+      "link": "https://hbr.org/2019/01/data-science-and-the-art-of-persuasion",
+      "description": "In his article for the Harvard Business Review, Scott Berinto argues that organizations struggle to communicate the insights in all the information they’ve amassed. He also explores why this happens and how it can be remedied.",
+      "resourceid": "34",
+      "type": "texts"
+    },
+    {
+      "name": "Best Places",
+      "link": "https://www.bestplaces.net/",
+      "description": "BestPlaces.net provides data about cost of living, crime, cities, schools, etc. from the national level down to zipcode.",
+      "resourceid": "35",
+      "type": "data"
+    },
+    {
+      "name": "Adobe Color Contrast Checker",
+      "link": "https://color.adobe.com/create/color-contrast-analyzer",
+      "description": "The Adobe Color Contrast Checker allows you to view how different text colors look on any given background color. The Contrast Checker platform is relatively simple and consists of three main elements: hex color code inputs for text color and background colors; a preview of what the text would look like as small text, large text, and graphic components; and a contrast ratio that tells you whether your colors present enough contrast (the higher the ratio, the better).",
+      "resourceid": "36",
+      "type": "tool"
+    },
+    {
+      "name": "Gapminder",
+      "link": "https://www.gapminder.org/resources/",
+      "description": "Gapminder is platform that provides  tools for the creation of animated bubble charts, pyramid charts, and line charts. It has tools that can be used offline as well as TEDx videos and tutorials tied to the use of these tools.",
+      "resourceid": "37",
+      "type": "tool"
+    },
+    {
+      "name": "Tableau Public",
+      "link": "https://public.tableau.com/en-us/s/",
+      "description": "Free data visualization tool with a community of over one million people that have created over 3 million visualizations.",
+      "resourceid": "38",
+      "type": "tool"
+    },
+    {
+      "name": "Automate the Boring Stuff with Python",
+      "link": "https://automatetheboringstuff.com/",
+      "description": "Automate the Boring Stuff with Python teaches you how to use Python to write programs that do in minutes what would take you hours to do by hand (no prior programming experience required!)  With step -by-step instructions to walk you through each program, and practice projects these tutorials will enable you to do things like search for text in a file or across multiple files, update and format data in Excel spreadsheets of any size and so much more.",
+      "resourceid": "39",
+      "type": "texts"
+    },
+    {
+      "name": "Fusion Charts",
+      "link": "https://www.fusioncharts.com/",
+      "description": "A tool that allows you to create interactive charts and data dashboards coded in JavaScript. Provides a wide variety of chart types and is used by many major companies.",
+      "resourceid": "40",
+      "type": "tool"
+    },
+    {
+      "name": "Python Basics for Data Science",
+      "link": "https://learning.edx.org/course/course-v1:IBM+PY0101EN+2T2021/home",
+      "description": "Python Basics for Data Science is an IBM-created edX course that first introduces users to the very basics of the Python programming language, then moves into the direct applications to data science. The course also teaches users the basics of pandas, which is a software library for data manipulation and analysis.",
+      "resourceid": "41",
+      "type": "course"
+    },
+    {
+      "name": "The World Factbook",
+      "link": "https://www.cia.gov/the-world-factbook/",
+      "description": "Provides open source data on every country on the planet, from qualitative data such as government and a basic history to quantitative data such as geographic statistics and population distribution.",
+      "resourceid": "42",
+      "type": "data"
+    },
+    {
+      "name": "Tableau Basics Playlist",
+      "link": "https://youtube.com/playlist?list=PLoTcZM4tTuBwr9PmHlEleW_6NSdMEXV8H",
+      "description": "I created a playlist of two YouTube Tableau tutorials. They include setting the environment, visualizing a online dataset, and playing with different types of chart.",
+      "resourceid": "43",
+      "type": "visualization"
+    },
+    {
+      "name": "Cool Infographics",
+      "link": "https://coolinfographics.com/",
+      "description": "Cool Infographics is a blog for interesting data visualization creations. It allows you to navigate through the different posts to take inspiration and tips from what has already been created. Furthermore, it also provides expert tips and news articles related to data visualization events.",
+      "resourceid": "44",
+      "type": "visualization"
+    },
+    {
+      "name": "Tableau Full Course - Learn Tableau in 6 Hours",
+      "link": "https://www.youtube.com/watch?v=aHaOIvR00So",
+      "description": "This free video provides a comprehensive walk through of how to use Tableau.",
+      "resourceid": "45",
+      "type": "tutorial"
+    },
+    {
+      "name": "BamSEC",
+      "link": "https://www.bamsec.com/",
+      "description": "BamSEC takes the SEC filings from every public company and breaks them down into easily readable documents that can be searched with ease. The website also allows you to export these filings into Excel files that allows the data to be easily worked with.",
+      "resourceid": "46",
+      "type": "data"
+    },
+    {
+      "name": "Seeing Data",
+      "link": "http://seeingdata.org/",
+      "description": "Articles and lessons discussing how to visualize data and tell stories with it. Also provides further resources such as books and blogs to learn more about data visualization and storytelling.",
+      "resourceid": "47",
+      "type": "texts"
+    },
+    {
+      "name": "Help Me Viz",
+      "link": "https://policyviz.com/helpmeviz/",
+      "description": "HelpMeViz is an online collaboration platform for people in the data and design communities, structured to generate constructive, productive discussion on the topic of data visualization. Users can submit their data visualizations for feedback, and the people that make up the HelpMeViz online community provide their comments and criticisms to help them improve their designs.",
+      "resourceid": "48",
+      "type": "tool"
+    },
+    {
+      "name": "Speeko",
+      "link": "https://www.speeko.co/",
+      "description": "Speeko is basically A.I. powered speech coaching app. Choose, from an expansive library, any prompt or exercise ranging from storytelling to giving online presentations. Record your voice, and get instant feedback on your vocal delivery in areas like pace, pausing, filler words, and intonation.",
+      "resourceid": "49",
+      "type": "tool"
+    },
+    {
+      "name": "R-tutor.com",
+      "link": "http://www.r-tutor.com/r-introduction",
+      "description": "It includes some basic tutorials for R basics, including basic data type, data structures, and statistics with R, which are extremely helpful.",
+      "resourceid": "50",
+      "type": "tutorial",
+      "greeting": "hi"
+    },
+    {
+      "name": "Chart.js",
+      "link": "https://www.chartjs.org/",
+      "description": "Chart.js is a simple and effective charting library. Chart.js uses JavaScript, and includes all of the basic chart types as well as chart animation and interaction.",
+      "resourceid": "51",
+      "type": "tool"
+    },
+    {
+      "name": "Pew Research Center’s Internet Project",
+      "link": "https://www.pewresearch.org/",
+      "description": "The Pew Research Center’s Internet Project offers the general public access to raw data sets from their research, allowing you to track key national, political, economic and demographic trends in the US. Their data sets are available as single compressed archive files which makes the data easy to visualize.",
+      "resourceid": "52",
+      "type": "data"
+    },
+    {
+      "name": "Wall Street Journal Graphics",
+      "link": "https://graphics.wsj.com/",
+      "description": "A resource that shows all of the Wall Street Journal's graphics and data visualization projects.",
+      "resourceid": "53",
+      "type": "visualization"
+    },
+    {
+      "name": "Easy Analytic Software Inc. (EASI)",
+      "link": "https://dataplanet-sagepub-com.proxy.library.nd.edu/dataset?view=",
+      "description": "This resource provides data from MediaMark's American Consumer Survey Report along with other sources and enables users to breakdown data by census tracts, zip codes, and other geographical locations.",
+      "resourceid": "54",
+      "type": "data"
+    },
+    {
+      "name": "The Hero’s Journey: Finding Inspiration to Author Brand Stories",
+      "link": "https://businessofstory.com/podcast/the-heros-journey-finding-inspiration-to-author-brand-stories/",
+      "description": "Matthew Winkler, the creator of 'What Makes a Hero?', one of TED-Ed’s most viewed and shared videos, joins Parker Howellto unpack the universal story structure of Joseph Campbell’s monolith and why it’s matters to business storytelling.",
+      "resourceid": "55",
+      "type": "tutorial"
+    },
+    {
+      "name": "National Center for Education Statistics Data Tools",
+      "link": "https://nces.ed.gov/datatools/",
+      "description": "It has a comprehensive lists of education datasets across the United States, including public schools, private schools, school districts, online visualization tools, and college datasets.",
+      "resourceid": "56",
+      "type": "data"
+    },
+    {
+      "name": "Visualoop",
+      "link": "http://visualoop.com/",
+      "description": "Visualoop is an incredibly helpful one-stop shop for everything data visualization, as it houses infographics, news stories, interviews, and events related to the subject matter. The site allows you to see the infographics and data visualizations of fellow designers, providing inspiration to its user base and exposing them to unique visualization techniques.",
+      "resourceid": "57",
+      "type": "visualization"
+    },
+    {
+      "name": "Data Science: Foundations using R Specialization",
+      "link": "https://www.coursera.org/specializations/data-science-foundations-r#courses",
+      "description": "A free course series offered by Johns Hopkins University that introduces the toolbox for Data Scientist, including R programming, data acquiring and cleaning, etc.",
+      "resourceid": "58",
+      "type": "course"
+    },
+    {
+      "name": "BrandMentions",
+      "link": "https://brandmentions.com/socialmention/",
+      "description": "BrandMentions (particularly its social mentions feature) allows you to view the social mentions for any given term across all internet channels (search engine inputs, social media, blogs, etc.). The service then instantaneously compiles a detailed report with all social mentions over the past 7 days.",
+      "resourceid": "59",
+      "type": "tool"
+    },
+    {
+      "name": "FlowingData",
+      "link": "https://flowingdata.com/made-by-flowingdata/",
+      "description": "FlowingData is a resource that allows you to see how analysts, designers, politicians, statisticians, and engineers, have made use of data visualizations in the recent past to explain key events and activities. The blog post has free tutorials and videos that allow you to see how data visualization can be used in a wide variety of disciplines.",
+      "resourceid": "60",
+      "type": "visualization"
+    },
+    {
+      "name": "Stackshare",
+      "link": "https://stackshare.io/categories",
+      "description": "All the best open source and Software as a Service (SaaS) tools in one place.",
+      "resourceid": "61",
+      "type": "tool"
+    },
+    {
+      "name": "How to Stop saying 'um', 'ah' and 'you know'",
+      "link": "https://hbr.org/2018/08/how-to-stop-saying-um-ah-and-you-know",
+      "description": "We've all been in a situation where we got rattled while speaking and heavily leaned on filler words such as “um,” “ah,” or “you know.” These words can become crutches that diminish our credibility, make us appear hesitant and distract from our message. In this article Noah Zandan, lays out different methods to avoid these filler words and give a smoother more impactful presentation.",
+      "resourceid": "62",
+      "type": "texts"
+    },
+    {
+      "name": "GitHub Co-pilot",
+      "link": "https://copilot.github.com/",
+      "description": "An AI tool that assists with programming and coding by suggesting lines of codes to complete what you have already written. A very advanced autocomplete that works for coding in many languages.",
+      "resourceid": "63",
+      "type": "tool"
+    },
+    {
+      "name": "FiveThirtyEight",
+      "link": "https://data.fivethirtyeight.com/",
+      "description": "FiveThirtyEight is an interactive global news and sports website that has incredible data visualizations that you can download and play around with on your own for free.",
+      "resourceid": "64",
+      "type": "visualization"
+    },
+    {
+      "name": "Vox: How America's hottest city is trying to cool down",
+      "link": "https://www.youtube.com/watch?v=ZQ6fSHr5TJg",
+      "description": "This Vox video does an incredible job of linking the climate effects on poverty in Phoenix using a variety of both qualitative and quantitative data and data visualizations.",
+      "resourceid": "65",
+      "type": "visualization"
+    },
+    {
+      "name": "The 25 Best Data Visualizations of 2020",
+      "link": "https://visme.co/blog/best-data-visualizations/",
+      "description": "Article depicting some of the most impactful and visually appealing charts, with a variety of complex and simple charts regarding various topics.",
+      "resourceid": "66",
+      "type": "texts"
+    },
+    {
+      "name": "Miro",
+      "link": "https://miro.com/app/board/o9J_lvcBvuo=/?userEmail=gkruszew@nd.edu&track=true&utm_source=notification&utm_medium=email&utm_campaign=add-to-board&utm_content=go-to-board",
+      "description": "Miro's infinitely zoomable canvas and its large web white board enables users to plan and work any way that they want. It is great tool for collaboration and building of your teammates' ideas.",
+      "resourceid": "67",
+      "type": "tool"
+    },
+    {
+      "name": "Amplitude Analytics",
+      "link": "https://amplitude.com/amplitude-analytics",
+      "description": "Amplitude Analytics allows you to both collect data from your website in the background as well as create visualizations using the data. Amplitude allows users to test their hypotheses about what is happening in the data by filtering the data and allowing users to create custom filters themselves.",
+      "resourceid": "68",
+      "type": "tool"
+    },
+    {
+      "name": "Open Science Data Cloud",
+      "link": "https://www.opensciencedatacloud.org/",
+      "description": "The Open Science Data Cloud provides the scientific community with resources for storing, sharing, and analyzing terabyte and petabyte-scale scientific datasets. The OSDC is a data science ecosystem in which researchers can house and share their own scientific data, access complementary public datasets, build and share customized virtual machines with whatever tools necessary to analyze their data, and perform the analysis to answer their research questions. It is a one-stop shop for making scientific research faster and easier.",
+      "resourceid": "69",
+      "type": "tool"
+    },
+    {
+      "name": "SPSS",
+      "link": "https://www.ibm.com/products/spss-statistics",
+      "description": "IBM SPSS Statistics is a powerful statistical software platform. It offers a user-friendly interface and a robust set of features that lets your organization quickly extract actionable insights from your data.",
+      "resourceid": "70",
+      "type": "tool"
+    },
+    {
+      "name": "JASP",
+      "link": "https://jasp-stats.org/",
+      "description": "JASP is an open-source project supported by the University of Amsterdam which offers standard analysis procedures in both their classical and Bayesian form.",
+      "resourceid": "71",
+      "type": "tool"
+    },
+    {
+      "name": "Jamovi",
+      "link": "https://www.jamovi.org/",
+      "description": "Jamovi is a new “3rd generation” statistical spreadsheet. designed from the ground up to be easy to use, jamovi is a compelling alternative to costly statistical products such as SPSS and SAS.",
+      "resourceid": "72",
+      "type": "tool"
+    },
+    {
+      "name": "Scala",
+      "link": "https://www.scala-lang.org/https://www.scala-lang.org/",
+      "description": "Scala combines object-oriented and functional programming in one concise, high-level language. Scala's static types help avoid bugs in complex applications, and its JVM and JavaScript runtimes let you build high-performance systems with easy access to huge ecosystems of libraries.",
+      "resourceid": "73",
+      "type": "tool"
+    },
+    {
+      "name": "Tensorflow",
+      "link": "https://www.tensorflow.org/",
+      "description": "TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.",
+      "resourceid": "74",
+      "type": "tool"
+    },
+    {
+      "name": "Deep Dive Into Modern Web Development",
+      "link": "https://fullstackopen.com/en/",
+      "description": "TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.",
+      "resourceid": "75",
+      "type": "course"
+    },
+    {
+      "name": "The Data and Analytics Dictionary",
+      "link": "https://peterjamesthomas.com/data-and-analytics-dictionary/",
+      "description": "This is a free dictionary covers terms commonly used in the Data and analytics field.",
+      "resourceid": "76",
+      "type": "texts"
+    },
+    {
+      "name": "Python",
+      "link": "https://www.python.org/",
+      "description": "Python is a programming language that lets you work quickly and integrate systems more effectively. It is highly suited to working with data and data visualization. It does suffer some speed limitations at enterprise levels.",
+      "resourceid": "77",
+      "type": "language"
+    },
+    {
+      "name": "Visual Cinnamon",
+      "link": "https://www.visualcinnamon.com/",
+      "description": "Unique and beautiful data visualizations and data art.",
+      "resourceid": "78",
+      "type": "visualization"
+    },
+    {
+      "name": "Kaggle",
+      "link": "https://www.kaggle.com/",
+      "description": "Inside Kaggle you’ll find all the code & data you need to do your data science work. Use over 50,000 public datasets and 400,000 public notebooks to conquer any analysis in no time. There are also data modeling competitions with cash prizes.",
+      "resourceid": "79",
+      "type": "visualization"
+    },
+    {
+      "name": "Grafana",
+      "link": "https://grafana.com/",
+      "description": "Data visualization software that provides simple, dynamic dashboards and other visualizations. Free to use and supports various data sources.",
+      "resourceid": "80",
+      "type": "tool"
+    },
+    {
+      "name": "Open Source Dashboard Software",
+      "link": "https://www.predictiveanalyticstoday.com/open-source-dashboard-software/",
+      "description": "This article provides a comprehensive overview of what data dashboards are and how to create them. It also provides an explanation of top open source dashboard software and evaluates the key advantages of each. ",
+      "resourceid": "81",
+      "type": "texts"
+    },
+    {
+      "name": "Luke Barousse - YouTube Channel",
+      "link": "https://www.youtube.com/c/LukeBarousse/featured",
+      "description": "Luke Barousse makes videos about tech and skills for data science.",
+      "resourceid": "82",
+      "type": "tutorial"
+    },
+    {
+      "name": "Data Science Central",
+      "link": "https://www.datasciencecentral.com/",
+      "description": "Data Science Central serves as an online resource hub for everything related to data science and big data. The site covers a wide array of data science topics regarding analytics, tools, data visualization, code, and job opportunities.",
+      "resourceid": "83",
+      "type": "tutorial"
+    },
+    {
+      "name": "Observable",
+      "link": "https://observablehq.com/",
+      "description": "Observable is a website that contain projects of a global community of visualization and analysis experts. We can easily fork one project, drop in some Observable's visualization and UI components, or write custom code alongside any JS library.",
+      "resourceid": "84",
+      "type": "visualization"
+    },
+    {
+      "name": "Data Visualization with Tableau (UC Davis)",
+      "link": "https://www.coursera.org/specializations/data-visualization",
+      "description": "This online course offered through the University of California, Davis teaches the basics of Tableau for data visualization. This free course takes about 6 months to complete and teaches users how to create and properly design data dashboards.",
+      "resourceid": "85",
+      "type": "course"
+    },
+    {
+      "name": "The Marvel App",
+      "link": "https://marvelapp.com/",
+      "description": "This free prototyping tool allows users to quickly bring to life their creations. The app provides simple, aesthetic templates that allow you to easily navigate your way through creating mockups and demonstration, which could be helpful in presenting a final proposal/solution.",
+      "resourceid": "86",
+      "type": "tool"
+    },
+    {
+      "name": "Tableau- Getting Started with Dashboards and Stories",
+      "link": "https://www.tableau.com/learn/tutorials/on-demand/getting-started-dashboards-and-stories",
+      "description": "This video series is a helpful guide on how to use data and charts and create compelling data stories. It walks you through the basic fundamentals of  sheets and teaches the user on how to tell their data stories through Tableau. ",
+      "resourceid": "87",
+      "type": "tutorial"
+    },
+    {
+      "name": "Pandas",
+      "link": "https://pandas.pydata.org/",
+      "description": "Pandas is an incredibly useful software library built within Python that allows users to analyze large volumes of data efficiently and effectively. Pandas is very easy to use, fast, and allows you to both analyze and manipulate data.",
+      "resourceid": "89",
+      "type": "library"
+    },
+    {
+      "name": "Formidable Forms",
+      "link": "https://formidableforms.com/",
+      "description": "WordPress form plugin that helps to gather data from websites and display data in various forms either on your website or in separate data dashboard websites.",
+      "resourceid": "90",
+      "type": "plugin"
+    },
+    {
+      "name": "r/dataisbeautiful",
+      "link": "https://www.reddit.com/r/dataisbeautiful/",
+      "description": "r/dataisbeautiful is a subreddit where users can post any data visualizations they have created. The website is a great place to go for inspiration on different ways to display data in an effective way.",
+      "resourceid": "91",
+      "type": "visualization"
+    },
+    {
+      "name": "Awwwards",
+      "link": "https://www.awwwards.com/awwwards/collections/storytelling/",
+      "description": "Awwwards are the website awards that recognize the talent of the best developers, designers, and web agencies. The storytelling section includes examples of successful storytelling of websites that encourage user interaction and engagement.",
+      "resourceid": "88",
+      "type": "visualization"
+    },
+    {
+      "name": "Notist",
+      "link": "https://noti.st/",
+      "description": "Notist is a place to build your public speaking portfolio. A place to share your slides, but also to collate feedback, tweets, photos, resources and everything to create a permanent history of your speaking events.",
+      "resourceid": "89",
+      "type": "visualization"
+    }
+  ]
+}

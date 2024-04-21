@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"
+      defer></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"
+      defer></script>
+
+    <!-- Remote Time Scripts -->
+    <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/syllabus.js" defer></script>
+
+    <title>ITAO 34161 &middot; Syllabus</title>
+  </head>
+
+  <body>
+
+    <!-- navbar -->
+    <div id="navbar" class="bg-grey4"></div>
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb" class="bg-light-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-5 pt-3 pb-2">
+            <ol class="breadcrumb rounded-0">
+              <li class="breadcrumb-item"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Syllabus</li>
+            </ol>
+          </div>
+          <div class="col-12 col-md-7 pt-4 pb-2">
+            <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame
+              (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-12">
+          <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Syllabus</p>
+          <hr class="thicker">
+          <p class="page-divider text-center"><span class="page-divider-icon text-center"><i
+                class="fad fa-fw fa-4x fa-clipboard-list-check" aria-hidden="true"></i></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-0">
+      <div class="row">
+
+        <div class="col-12 col-md-4">
+
+          <p class="text-right mt-n3 mb-2 mr-2"><span id="show-hide-contents" class="bright-blue uncheck-types pointer"
+              role="button">Check all</span></p>
+
+          <div class="card shadow-sm px-3 py-4 bg-white">
+            <h5 class="chocolate mb-4 ml-2">Table of Contents</h5>
+            <ul class="list-group" id="syllabus-parts">
+              <li class="list-group-item border-0 rounded-0">
+                <div class="alert bg-aliceblue m-0" role="alert"><strong>Tick the box</strong> for each section after
+                  you read it</div>
+              </li>
+              <li data-filter="syllabus-instructor"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Instructor
+              </li>
+              <li data-filter="syllabus-course-goals"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Course
+                Goals
+              </li>
+              <li data-filter="syllabus-course-materials"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Course
+                Materials
+              </li>
+              <li data-filter="syllabus-due-dates"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Due Dates
+                &amp;
+                Late Work
+              </li>
+              <li data-filter="syllabus-attendance"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Attendance
+                &amp; Participation
+              </li>
+              <li data-filter="syllabus-grades"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Grades
+              </li>
+              <li data-filter="syllabus-assignment-weights"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Assignment
+                Weights
+              </li>
+              <li data-filter="syllabus-social-practices"
+                class="list-group-item list-group-item-action pointer border-0 rounded-0 filter-type-checkbox mr-3">
+                <span class="checkbox-icon"><i class="fal fa-square fa-lg mr-3 bright-blue"></i></span>Social
+                Practices
+              </li>
+            </ul>
+          </div>
+          <!-- .card -->
+        </div>
+        <div class="col-12 col-md-8" id="syllabus-all-parts">
+
+          <div class="row mt-4">
+
+            <div class="col-12 card-container syllabus-instructor mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Instructor</h5>
+                </div>
+                <div class="card-body">
+                  <h6><strong>Dr. Randal Sean Harrison, Ph.D.</strong></h6>
+                  <p>Emerging Technologies Librarian<br>Concurrent Teaching Professor, Management & Organization</p>
+                  <p>Hesburgh Library 158<br>(574) 631-0312<br><a
+                      href="mailto:rharriso@nd.edu">rharriso@nd.edu</a><br><a href="https://randalseanharrison.com"
+                      target="_blank">randalseanharrison.com</a></p>
+                  <p>Email is the fastest way to reach me. Office hours are by appointment.</p>
+                  <button type='button' data-url="https://calendly.com/randal-sean-harrison/consultation"
+                    data-target="_blank" class='btn  btn-primary text-light'><i
+                      class="fad fa-calendar-plus fa-fw mr-2"></i>Book consultation</button>
+
+                  <h6 class="mt-5"><strong>Business Librarians</strong></h6>
+                  <p><a href="https://library.nd.edu/business" target="_blank">Our amazing business librarians</a>, and
+                    our amazing <a href="https://directory.library.nd.edu/directory/employees/bchiewph"
+                      target="_blank">Economics and Data Librarian</a>, are available to help you with business-related
+                    research. Reach out to them with questions &mdash; they're there to help you succeed at Notre Dame.
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-course-goals mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Course Goals</h5>
+                </div>
+                <div class="card-body">
+                  <h6><strong>Description</strong></h6>
+                  <p>As we move into the twenty-first century, we are experiencing a paradigm shift in the way we
+                    interpret information and make decisions in many fields &mdash; everything from business and
+                    medicine to social networking and dating.
+                    While gathering data to inform our decisions is an important skill, an often overlooked skill is the
+                    ability to communicate that data impactfully. In this class you'll learn techniquest to motivate
+                    audiences and stakeholders to
+                    adopt the insights that you, as the data analyst, offer them. This course will focus on the tools
+                    and processes to create data-rich deliverables crucial to communicating the insights that move your
+                    stakeholders toward greater
+                    understanding of the data, and greater acceptance of the action items you recommend. Students will
+                    leave the course having completed the deliverables at each stage of the process of developing
+                    data-rich visuals.</p>
+
+                  <h6 class="mt-4"><strong>Objectives</strong></h6>
+                  <p>In this course, you will learn to:</p>
+                  <ol class="ml-n2">
+                    <li class="pl-3 mb-2">Create impactful charts and graphs in spreadsheets</li>
+                    <li class="pl-3 mb-2">Think ethically about data, to spot and avoid using misleading tactics in
+                      charts and graphs</li>
+                    <li class="pl-3 mb-2">Master the fundamentals of Gestalt Theory to create stunning data-rich
+                      documents, presentation slides and 'slidedocs'</li>
+                    <li class="pl-3 mb-2">Use the principles of 'data storytelling' to create impactful presentations
+                    </li>
+                    <li class="pl-3 mb-2">Use Tableau to create a dyanmic data dashboard</li>
+                    <li class="pl-3 mb-2">Learn to create a simple web page and upload it to GitHub</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-course-materials mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Course Materials</h5>
+                </div>
+                <div class="card-body">
+                  <h6 class="mb-3"><strong>Required Reading</strong></h6>
+                  <p>We'll read intensively toward the beginning of class to get a handle on the theory, terminology and
+                    processes, <span class="bright-blue pointer" type="button" data-toggle="collapse"
+                      data-target="#panel73498304" aria-expanded="false" aria-controls="header-0">tapering to zero
+                      readings</span> as you prepare for your final presentations.</p>
+
+
+                  <div class="accordion" id="accordion58609419">
+                    <div class="card bg-white border-0 rounded-0">
+                      <div id="panel73498304" class="collapse" aria-labelledby="headingOne"
+                        data-parent="#accordion58609419">
+                        <div class="card-body">
+                          <img src="img/readings-per-week.png" class="img-fluid shadow"
+                            alt="chart of readings per week">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- accordion -->
+
+                  <!-- books -->
+                  <div class="list-group-flush border-0 rounded-0">
+                    <a href="https://www.bkstr.com/notredamestore/course-materials-results?shopBy=course&divisionDisplayName=&departmentDisplayName=ITAO&courseDisplayName=34161&sectionDisplayName=01&programId=949&termId=100070254"
+                      target="_blank" class="list-group-item list-group-item-action rounded-0">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><strong class="bright-blue">Data Story</strong></h6>
+                        <small class="text-success"><strong>Required</strong></small>
+                      </div>
+                      <p class="mb-1">Explores the most effective ways to turn your data into narratives that blend the
+                        power of language, numbers, and graphics.</p>
+                      <small><i class="fad fa-user fa-fw mr-2"></i>Nancy Duarte</small>
+                    </a>
+                    <a href="https://www.bkstr.com/notredamestore/course-materials-results?shopBy=course&divisionDisplayName=&departmentDisplayName=ITAO&courseDisplayName=34161&sectionDisplayName=01&programId=949&termId=100070254"
+                      target="_blank" class="list-group-item list-group-item-action rounded-0">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><strong class="bright-blue">Resonate</strong></h6>
+                        <small class="text-success"><strong>Required</strong></small>
+                      </div>
+                      <p class="mb-1">An exploration of how to use narrative theory and storytelling principles to
+                        resonate with audiences.</p>
+                      <small><i class="fad fa-user fa-fw mr-2"></i>Nancy Duarte</small>
+                    </a>
+                    <a href="https://www.bkstr.com/notredamestore/course-materials-results?shopBy=course&divisionDisplayName=&departmentDisplayName=ITAO&courseDisplayName=34161&sectionDisplayName=01&programId=949&termId=100070254"
+                      target="_blank" class="list-group-item list-group-item-action rounded-0">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><strong class="bright-blue">Storytelling with Data</strong></h6>
+                        <small class="text-success"><strong>Required</strong></small>
+                      </div>
+                      <p class="mb-1">An exploration of how to choose and craft compelling individual slides.</p>
+                      <small><i class="fad fa-user fa-fw mr-2"></i>Cole Nussbaumer Knaflic</small>
+                    </a>
+
+                    <a href="https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569/ref=asc_df_1324001569/?tag=hyprod-20&linkCode=df0&hvadid=385644363292&hvpos=&hvnetw=g&hvrand=1991786496219088076&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9016278&hvtargid=pla-826703710269&psc=1&tag=&ref=&adgrpid=77500930254&hvpone=&hvptwo=&hvadid=385644363292&hvpos=&hvnetw=g&hvrand=1991786496219088076&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9016278&hvtargid=pla-826703710269"
+                      target="_blank" class="list-group-item list-group-item-action p-3 bg-alice-blue rounded-0">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h6 class="mb-1"><strong class="bright-blue">How Charts Lie</strong></h6>
+                        <small class="text-warning"><strong>Recommended</strong></small>
+                      </div>
+                      <p class="mb-1">An exploration of misleading and unethical tactics in data-rich communication.</p>
+                      <small><i class="fad fa-user fa-fw mr-2"></i>Alberto Cairo</small>
+                    </a>
+                  </div>
+
+
+
+                  <h6 class="mt-4"><strong>Software</strong></h6>
+                  <p>You will also need access the following software packages:</p>
+                  <ul>
+                    <li>Tableau Desktop (You may download a free version of the software on your personal computer for 1
+                      year through the <a href="https://www.tableau.com/academic/students" target="_blank">Tableau for
+                        Students program</a>.)</li>
+                    <li>Microsoft Excel and Google Sheets</li>
+                    <li>Microsoft Word and Google Docs</li>
+                    <li>Microsoft Powerpoint and Google Slides</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-due-dates mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Due Dates &amp; Late Work</h5>
+                </div>
+                <div class="card-body">
+                  <h6><strong>Due Dates</strong></h6>
+                  <p>All due dates are presented in Eastern Standard Time (EST). Students are responsible for any time
+                    zone conversion required when submitting assignments. If you're confused by the time-conversion, the
+                    current time in South Bend (EST)
+                    is presented in the banner at the top of this website.</p>
+                  <h6><strong>Late Work</strong></h6>
+                  <p>Late work will be excused only for documented medical emergencies. Unexcused late assignments will
+                    still receive credit, but will be adjusted downward by 10% of total assignment points for each day
+                    they are late.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-attendance mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Attendance &amp; Participation</h5>
+                </div>
+                <div class="card-body">
+                  <h6><strong>Attendance</strong></h6>
+                  <p>Attendance is mandatory and essential for obtaining a passing grade in the class. Students are
+                    allowed 2 penalty-free absences. Absences will only be excused for medical emergencies and when
+                    university-required service conflicts.
+                    Absences beyond a second may affect your participation grade. If you know you will have to miss
+                    class, please contact your instructor beforehand.</p>
+
+                  <h6><strong>Participation</strong></h6>
+                  <p>Your participation grade is made up of your participation during class discussions and the
+                    percentage of resources you contribute to the Curating Resources assignment.</p>
+                  <p>You needn't make some arbitrary number of comments per class, but I should have a sense at
+                    the end of the semester that you contributed positively to our class discussions. Participating in
+                    this way helps you to both contribute to and leverage the collective intelligence of the group.
+                    During class, you will be expected to
+                    have
+                    your camera turned on, though you may mute the camera briefly, as necessary. You may mute your mic,
+                    as well, but please be be ready to respond quickly when called on.</p>
+
+                  <div class="embed-responsive embed-responsive-16by9 mt-4"><iframe title="vimeo-player"
+                      src="https://player.vimeo.com/video/446222289?h=f193d720f8" width="640" frameborder="0"
+                      allowfullscreen></iframe></div>
+
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-grades mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Grades</h5>
+                </div>
+                <div class="card-body">
+
+                  <h6 class="mb-3"><strong>Grade Ranges</strong></h6>
+
+                  <div class="row">
+
+                    <div class="col-12">
+                      <p class="alert alert-primary">Click the letter grades for a detailed description.</p>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <table class='table table-sm table-striped border'>
+                        <thead class='thead-dark d-none'>
+                          <tr>
+                            <th class='w-25 text-center'>Letter</th>
+                            <th class='w-75 text-center'>Number Range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-grade="A"
+                              data-grade-description="<strong>Excellent work &mdash; </strong>Work at this level is exceptional, unusually thorough, well-reasoned or crafted, creative, methodologically sophisticated, and demonstrates professional quality. This category indicates the pinnacle of such work."
+                              class="text-center bright-blue pointer gradepoint">A</td>
+                            <td class="text-center">95% - 100%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="A-"
+                              data-grade-description="<strong>Top Quality &mdash; </strong>Work at this level shows many signs of creativity and is thorough and well-crafted. The work meets and in most places exceeds top professional standards. Solid work, with perhaps small spaces for improvement. Approaching excellence with just a bit more work."
+                              class="text-center bright-blue pointer gradepoint">A-</td>
+                            <td class="text-center">91% - 94.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="B+"
+                              data-grade-description="<strong>Very Good &mdash; </strong>Well-reasoned and crafted, methodologically sophisticated, demonstrating a solid understanding of the principles underwriting the task and the course. Falls just short of approaching excellence."
+                              class="text-center bright-blue pointer gradepoint">B+</td>
+                            <td class="text-center">87% - 90.99</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="B"
+                              data-grade-description="<strong>Good Work &mdash;</strong> More than competent work. The work indicates a solid effort and clear skill. The work demonstrates the student's understanding of many of the requirements of the assignment and the student has mastered many but not all of the principles underwriting the assignment and course. Some room to improve is clear."
+                              class="text-center bright-blue pointer gradepoint">B</td>
+                            <td class="text-center">83% - 86.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="B-"
+                              data-grade-description="<strong>Borderline Good &mdash; </strong>The work shines at moments but wavers generally between good work and a merely acceptable standard. The student may have relied on their strengths and not pushed their themselves; or the student may simply have been unable to master the concepts which might have elevated the work to the next level."
+                              class="text-center bright-blue pointer gradepoint">B-</td>
+                            <td class="text-center">79% - 82.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="C+"
+                              data-grade-description="<strong>Satisfactory &mdash; </strong>The work satisfies the core requirements of the assignment. However, the work does not demonstrate a sophisticated understanding of the principles which would underwrite professional quality work. There may be small moments of quality, but they are not enough to help the work rise above a somewhat deficient approach and execution."
+                              class="text-center bright-blue pointer gradepoint">C+</td>
+                            <td class="text-center">75% - 78.99%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+
+                      <table class='table table-sm table-striped border'>
+                        <thead class='thead-dark d-none'>
+                          <tr>
+                            <th class='w-25 text-center'>Letter</th>
+                            <th class='w-75 text-center'>Number Range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td data-grade="C"
+                              data-grade-description="<strong>Satisfactory &mdash; </strong>The work barely meets the minimum standard for acceptable performance, and is inadequately developed or flawed. Methodological or analytical performance is weak and fails to demonstrate knowledge of the principles which underwrite the assignment or course."
+                              class="text-center bright-blue pointer gradepoint">C</td>
+                            <td class="text-center">71% - 74.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="C-"
+                              data-grade-description="<strong>Borderline Passing &mdash;</strong> The work barely rises to the level of acceptable. A significant number of flaws indicate a flawed understanding of the assignment or a failure to invest the proper time or effort on the assignment."
+                              class="text-center bright-blue pointer gradepoint">C-</td>
+                            <td class="text-center">67% - 70.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="D+"
+                              data-grade-description="<strong>Poor work &mdash; </strong>The directives of the assignment were not followed or perhaps not understood. The assignment may indicate the student's need for additional study or assistance outside the course or that the material is too advanced."
+                              class="text-center bright-blue pointer gradepoint">D+</td>
+                            <td class="text-center">63% - 66.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="D"
+                              data-grade-description="<strong>Poorest Work &mdash; </strong>The work is of the lowest quality to receive a grade. The work demonstrates no real understanding of the principles underwriting the course or assignment. The work is assembled but not well-crafted with failures of execution in most places."
+                              class="text-center bright-blue pointer gradepoint">D</td>
+                            <td class="text-center">60% - 62.99%</td>
+                          </tr>
+                          <tr>
+                            <td data-grade="F"
+                              data-grade-description="<strong>Failing &mdash; </strong> The work, if it was submitted, fails to meet even minimal expections for course credit. The work demonstrates insufficient quality for proper consideration or evaluation."
+                              class="text-center bright-blue pointer gradepoint">F</td>
+                            <td class="text-center">0% - 59.99%</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+
+
+                  </div>
+
+                  <h6 class="mt-3"><strong>Grade Curving</strong></h6>
+                  <p>Mendoza College of Business policy requires the undergraduate school grade point average range for
+                    a course must be between 3.0 - 3.6. It may be necessary to “curve” grades to comply with this
+                    policy.</p>
+
+                  <h6 class="mt-3"><strong>Grade Review</strong></h6>
+                  <p>Grading is a subjective and holistic process, and though I strive to make it as objective as
+                    possible, my role is to evaluate your work based on my best thinking as an expert in this field. If
+                    you believe there was an error and
+                    you'd like to challenge your grade, please first examine your assignment again with regard to both
+                    the prompt and any rubric provided. If you still feel the need for a grade review use the <a
+                      href="https://forms.gle/xpHzRajczdxwYqkk8" target="_blank">grade review request form</a> to argue
+                    your case.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-assignment-weights mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Assignment Weights</h5>
+                </div>
+                <div class="card-body">
+
+                  <table class='table table-sm table-striped'>
+                    <thead class='thead bg-transparent'>
+                      <tr>
+                        <th class='w-75 text-left'>Assignment</th>
+                        <th class='w-25 text-center'>% of Grade</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">Participation (includes Curating Resources)</td>
+                        <td class="text-center">10%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Comprehension Checks</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Charts &amp; Graphs</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Slide Deck</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Slidedoc</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Data Dashboard</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">Final Presentation</td>
+                        <td class="text-center">15%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-social-practices mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">Communication &amp; Social Practices</h5>
+                </div>
+                <div class="card-body">
+                  <h6><strong>Communication</strong></h6>
+                  <p>Strong communication practices are in high demand in industry. Practice these by responding to my
+                    direct emails, and those of your team members, as soon as you can &mdash; and certainly no later
+                    than ~24 hours. I will show you the
+                    same courtesy.</p>
+                  <h6><strong>Social Practices</strong></h6>
+                  <p>This course is conforms to the codes of conduct set forth in <a href="https://dulac.nd.edu/"
+                      target="_blank">du Lac: A Guide to Student Life</a> and the <a href="https://honorcode.nd.edu/"
+                      target="_blank">Undergraduate Academic
+                      Code of Honor</a>. As your instructor, I am dedicated to ensuring a harassment-free experience for
+                    everyone, regardless of sex and sexual orientation, gender and gender identity and expression, age,
+                    disability, physical
+                    appearance, race, ethnicity, nationality, and religion. We will not tolerate harassment or
+                    discrimination of sutdents in any form. In order to foster a positive and professional learning
+                    environment, I encourage you to use welcoming
+                    and inclusive language; be respectful of different viewpoints and experiences; gracefully accept
+                    constructive criticism; and show courtesy and respect towards other community members.</p>
+                  <p class="alert alert-warning">Please contact me immediatly if you experience or witness harassment.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 card-container syllabus-congratulations mb-4">
+              <div class="card shadow-sm border-0 rounded-0">
+                <div class="card-header bg-transparent border-0 chocolate">
+                  <h5 class="chocolate">I appreciate you reading the syllabus!</h5>
+                </div>
+                <div class="card-body">
+
+                  <h6><strong>Test Your Understanding</strong></h6>
+                  <p>Did you understand the course policies and practices?</p>
+                  <!-- Test your understanding -->
+
+                  <!-- Question 1 -->
+
+                  <div class=" mx-3 panel-understanding-check">
+                    <form class="multipleChoice">
+                      <div class="form-group">
+                        <label for="radio"><strong>The best way to get hold of the instructor?</strong></label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="6025346747" name="question-6025346747"
+                              id="bsr-radios-18880404313" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>While you may phone me, it's not the fastest way to get through."
+                              value="radio18880404313">
+                            Phone him
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="6025346747" name="question-6025346747"
+                              id="bsr-radios-18880404314" data-alert-type="alert-success"
+                              data-comment="<strong>Correct</strong><br>Yep, email is the fastest way to get through. You can also schedule a consultation directly."
+                              value="radio18880404314">
+                            Email him
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="6025346747" name="question-6025346747"
+                              id="bsr-radios-18880404315" data-alert-type="alert-warning"
+                              data-comment="<strong>Partially Correct</strong><br>There is no Slack channel but we could create one for the course if you think that would be useful."
+                              value="radio18880404315">
+                            Use Slack
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="6025346747" name="question-6025346747"
+                              id="bsr-radios-18880404316" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Yikes...but I do like that you're thinking out of the box."
+                              value="radio18880404316">
+                            Large clamps
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="multiple-choice-alert alert d-none" id="6025346747" role="alert"></div>
+                  </div>
+
+
+                  <!-- Question 2 -->
+                  <div class=" mx-3 panel-understanding-check">
+                    <form class="multipleChoice">
+                      <div class="form-group">
+                        <label for="radio"><strong>The penalty for late work is:</strong></label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="87201762532" name="question-87201762532"
+                              id="bsr-radios-79568937452" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Close, but no cigar. Number of cigars for you: goose egg, my friend."
+                              value="radio79568937452">
+                            Losing 50% credit on your assignment per day late
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="87201762532" name="question-87201762532"
+                              id="bsr-radios-79568937453" data-alert-type="alert-success"
+                              data-comment="<strong>Correct</strong><br>We need deadlines to simulate what you'll experience in industry."
+                              value="radio79568937453">
+                            Losing 10% of full credit on your assignment per day late
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="87201762532" name="question-87201762532"
+                              id="bsr-radios-79568937454" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>No, yeah, it is. This answer is straight up wrong."
+                              value="radio79568937454">
+                            Late work is never accepted
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="87201762532" name="question-87201762532"
+                              id="bsr-radios-79568937455" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Nah! You're great! Hey, things come up! But you should probably inform your instructor beforehand if you're going to be late with an assignment."
+                              value="radio79568937455">
+                            That was bad and you should feel bad
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="multiple-choice-alert alert d-none" id="87201762532" role="alert"></div>
+                  </div>
+
+                  <!-- Question 3 -->
+
+                  <div class=" mx-3 panel-understanding-check">
+                    <form class="multipleChoice">
+                      <div class="form-group">
+                        <label for="radio"><strong>I must respond to direct emails from the Instructor:</strong></label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="44662135746" name="question-44662135746"
+                              id="bsr-radios-12223394955" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Seriously? Erm, no." value="radio12223394955">
+                            Within 3 nanoseconds
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="44662135746" name="question-44662135746"
+                              id="bsr-radios-12223394956" data-alert-type="alert-success"
+                              data-comment="<strong>Correct</strong><br>Brilliant! And I'll do the same for you."
+                              value="radio12223394956">
+                            Within ~24 hours
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="44662135746" name="question-44662135746"
+                              id="bsr-radios-12223394957" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Making your boss chase after you in industry is not the road to that promotion you want. Strive always to improve your communication skills."
+                              value="radio12223394957">
+                            After a reminder(s) from the instructor
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="multiple-choice-alert alert d-none" id="44662135746" role="alert"></div>
+                  </div>
+
+                  <!-- Question 4 -->
+
+                  <div class=" mx-3 panel-understanding-check">
+                    <form class="multipleChoice">
+                      <div class="form-group">
+                        <label for="radio"><strong>How do I request a grade change?</strong></label>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="52205899155" name="question-52205899155"
+                              id="bsr-radios-54259143502" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Nerps. You'll need to use the form."
+                              value="radio54259143502">
+                            Email the instructor directly
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="52205899155" name="question-52205899155"
+                              id="bsr-radios-54259143503" data-alert-type="alert-success"
+                              data-comment="<strong>Correct</strong><br>I'm happy to entertain your reasoned argument that I've misgraded your work. Use the form to help me see my error specifically."
+                              value="radio54259143503">
+                            Use the Grade Review Request Form
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="52205899155" name="question-52205899155"
+                              id="bsr-radios-54259143504" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Nice one! Wait, I wrote this answer..."
+                              value="radio54259143504">
+                            Wish upon a star
+                          </label>
+                        </div>
+                        <div class="radio">
+                          <label>
+                            <input type="radio" data-question-number="52205899155" name="question-52205899155"
+                              id="bsr-radios-54259143505" data-alert-type="alert-danger"
+                              data-comment="<strong>Incorrect</strong><br>Adding additional stars will not increase your odds."
+                              value="radio54259143505">
+                            Wish upon 2 stars
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="multiple-choice-alert alert d-none" id="52205899155" role="alert"></div>
+                  </div>
+
+
+                  <h6 class="mt-5 mb-2"><strong>Pre-course Assessment</strong></h6>
+                  <p>Take our survey to describe your previous experience with data visualization, and to map your
+                    understanding of slide design and data storytelling concepts.</p>
+                  <button type='button' class='btn  btn-primary text-light'
+                    data-url="https://forms.gle/WvvQ3oX2Qw3s7CBg7" data-target="_blank"><i
+                      class="fad fa-fw fa-edit mr-2"></i>Take Survey</button>
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .col -->
+
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- container -->
+
+    <!-- Page footer -->
+    <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+    <!-- Back to top button -->
+    <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+
+
+    <div class="modal fade" id="modal-gradepoint" tabindex="-1" role="dialog" aria-labelledby="modal-grade-title"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title chocolate" id="modal-grade-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body pt-0"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>

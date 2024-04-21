@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Fontawesome -->
+  <script src="https://kit.fontawesome.com/edbb813799.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer>
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
+
+  <!-- Remote Time Scripts -->
+  <script src="js/remoteTime.js" crossorigin="anonymous" defer></script>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/calendar.js" defer></script>
+
+  <title>ITAO 34161 &middot; Calendar</title>
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div id="navbar" class="bg-grey4"></div>
+
+  <!-- Breadcrumbs -->
+  <nav aria-label="breadcrumb" class="bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-5 pt-3 pb-2">
+          <ol class="breadcrumb rounded-0">
+            <li class="breadcrumb-item"><a href="index.html"><i class="fad fa-home fa-fw mr-2"></i>Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Calendar</li>
+          </ol>
+        </div>
+        <div class="col-12 col-md-7 pt-4 pb-2">
+          <p class='text-center text-md-right timedescription mt-1'><i class="fad fa-fw fa-clock mr-2"></i>Notre Dame (EST)<strong><span class="realtime ml-2" id="south-bend-time"></span></strong></p>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-5 text-center mb-6 chocolate" id="dashboard-header">Calendar</p>
+        <hr class="thicker">
+        <p class="page-divider text-center"><span class="page-divider-icon text-center"><i class="fad fa-fw fa-4x fa-calendar-alt" aria-hidden="true"></i></span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-0">
+    <div class="row">
+      <div class="col-sm-4">
+        <p class="text-right mt-0 mb-3 pb-3 border-bottom mr-2"><i class="fad bright-blue mr-2 fa-expand-arrows"></i><span id="show-hide-weeks" class="bright-blue uncheck-types pointer" role="button">Expand all</span></p>
+
+        <ul class="nav flex-column nav-pills" id="tablist" role="tablist">
+
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link active" href="#panel5883197" data-toggle="tab" id="first-tab-link">Introductions &amp; Course Overview<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel6620541" data-toggle="tab">Charts &amp; Graphs<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel40408707" data-toggle="tab">Charts &amp; Graphs<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel3855735" data-toggle="tab">Slide Design<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel57057621" data-toggle="tab">Slide Design<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel11291973" data-toggle="tab">Data Stories<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel30599379" data-toggle="tab">Data Stories<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel77873032" data-toggle="tab">SlideDocs<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link maroon" href="#panel68336334" data-toggle="tab">Fall Break (no class)<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel32133722" data-toggle="tab">SlideDocs<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel89132476" data-toggle="tab">Data Dashboards<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel57535829" data-toggle="tab">Data Dashboards<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel66893830" data-toggle="tab">Data Dashboards<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel32277344" data-toggle="tab">Web Work<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel79950531" data-toggle="tab">Practice Presentations<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+          <li class="nav-item border-bottom">
+            <a class="rounded-0 nav-link" href="#panel7995053223" data-toggle="tab">Final Presentations<br><span class="fall-dates ml-2 graphite opacity-50"></span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-8">
+        <div class="tab-content" id="calendar-contents">
+
+          <div class="mt-3 ml-2 tab-pane fade show active first-tab-content" id="panel5883197" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-0 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">24th</span></h4>
+
+
+            <!-- Class Activities -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-users-class mr-2"></i>Class activities</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-action">Introductions, review syllabus/assignments/calendar, team orientations</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">26th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 1 "Why Resonate" (2-23)</li>
+                  <li class="list-group-item">Duarte, Data Story, "Introduction" (3-11)</li>
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Introduction (1-17)</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Class Activities -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-users-class mr-2"></i>Class activities</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/presentation/d/1lEs6I1OB1UzHkQZh6HwvB2x1vitNlcX7cnqHN-6BVRs/edit?usp=sharing" target="_blank" class="list-group-item list-group-item-action">Overview of Course Concepts</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel6620541" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">31st</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 1 "The Importance of Context" (19-35)</li>
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 2 "Choosing an Effective Visual" (35-71)</li>
+                  <li class="list-group-item">Duarte, Data Story, Ch. 1 "Becoming a Communicator of Data" (17-27)</li>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/WtjXoSD8LsaZ25gQ9" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">2nd</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel40408707" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">7th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Data Story, Ch. 6 "Choosing Charts and Writing Observations" (95-105)</li>
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 3 "Clutter is Your Enemy" (71-99)</li>
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 4 "Focus Your Audience’s Attention" (99-127)</li>
+                  <a href="https://miku.github.io/activememory/" class="list-group-item list-group-item-action" target="_blank">Short Term Memory Test</a>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/bZkZ1G31GNr9DJwU9" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">9th</span></h4>
+
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="assignments.html" class="list-group-item list-group-item-action" target="_blank">Charts and Graphs assignment</a>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel3855735" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">14th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 5 "Think Like a Designer" (127-151)</li>
+                  <li class="list-group-item">Knaflic, Storytelling with Data, Ch. 6 "Dissecting Model Visuals" (151-165)</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/ZA4LExLP9JaCxZ578" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">16th</span></h4>
+
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel57057621" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">21st</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Data Story, Ch. 7 "Annotating Insights Onto Charts" (111-117)</li>
+                  <li class="list-group-item">Duarte, Data Story, Ch. 2 "Communicating to Decision Makers" (32-42)</li>
+                  <li class="list-group-item">Duarte, Data Story, Ch. 9 "Marveling at the Magnitude" (143-153)</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/oyCKper37z2q3viLA" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">23rd</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel11291973" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">28th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 2 "Lessons From Myths and Movies" (25-53)</li>
+                  <li class="list-group-item">Duarte, Resonate, Ch. 3 "Get to Know the Hero" (55-73)</li>
+                  <li class="list-group-item">Duarte, Data Story, Ch. 11 "Storytelling with Data" (179-200)</li>
+                  <li class="list-group-item"><a href="https://youtu.be/Ez5yS4Q5ASA" target="_blank">Why Storytelling is More Trustworthy Than Presenting Data</a>, Karen Eber, TedXPurdue</li>
+                  <li class="list-group-item"><a href="https://spark.adobe.com/page/F5L0Q78pb0uCs/" target="_blank">The Reunion: Google Borrows the Monomyth</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">30th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel30599379" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">5th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 4 "Define the Journey" (75-95)</li>
+                  <li class="list-group-item">Duarte, Resonate, Ch. 5 "Create Meaningful Content" (97-123)</li>
+                  <li class="list-group-item">Duarte, Resonate, Ch. 6 "Structure Reveals Insights" (125-145)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/3zyZRN6gMgsbPgwA7" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">7th</span></h4>
+
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="assignments.html" class="list-group-item list-group-item-action" target="_blank">Slide Deck assignment</a>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel77873032" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">12th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Data Story, Ch. 8 "Building a skimmable slidedoc" (123-135)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/eFuZaAzMBH4QSWuM8" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">14th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel68336334" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">19th</span></h4>
+
+            <!-- No class -->
+            <div class="card bg-striped border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-striped border-0 graphite"><strong><i class="fad fa-fw fa-2x fa-ski-lift mr-2"></i>No class</strong></div>
+
+            </div>
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">21st</span></h4>
+
+            <!-- No class -->
+            <div class="card bg-striped border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-striped border-0 graphite"><strong><i class="fad fa-fw fa-skiing-nordic fa-2x mr-2"></i>No class</strong></div>
+
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel32133722" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">26th</span></h4>
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 7 "Deliver Something They'll Always Remember" (148-166)</li>
+                  <a class="list-group-item" href="https://www.youtube.com/watch?v=CYa85fcpVjY" target="_blank">Tedx Talk: The Lifesaver Bottle (Michael Pritchard)</a>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/3gc7P3CJ799LnX2n7" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">28th</span></h4>
+
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="assignments.html" class="list-group-item list-group-item-action" target="_blank">SlideDoc assignment</a>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel89132476" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">2nd</span></h4>
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 8 "There’s Always Room to Improve" (169-191)</li>
+                    <a href="https://public.tableau.com/en-us/s/resources" class="list-group-item list-group-item-action" target="_blank">Tableau tutorials (as needed)</a>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                  <a href="https://forms.gle/hGB7whbEijtfg7Tu8" class="list-group-item list-group-item-action" target="_blank">Comprehension Check</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">4th</span></h4>
+
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel57535829" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">9th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Duarte, Resonate, Ch. 9 "Change Your World" (193-216)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">11th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="mt-3 ml-2 tab-pane fade" id="panel66893830" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">16th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-action">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdbBGdUnm_4XR-4LsUJzNBGfffHwXFocWwCIKVKxB5P0VbGTw/viewform" class="list-group-item list-group-item-action" target="_blank">Submit a Resource</a>
+
+                </ul>
+
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">18th</span></h4>
+
+            <!-- Reading -->
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">No readings</li>
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Nothing Due</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-3 ml-2 tab-pane fade" id="panel32277344" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">23rd</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-book mr-2"></i>Have Read</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+              <p>You'll want to download a code editor. Both <a href="https://atom.io/" target="_blank">Atom.io</a> and <a href="https://code.visualstudio.com/download" target="_blank">VS Code</a> are free and excellent.</p>
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://www.youtube.com/watch?v=hu-q2zYwEYs" class="list-group-item list-group-item-action">HTML/CSS Tutorial Pt 1</a>
+                  <a href="https://www.youtube.com/watch?v=mbeT8mpmtHA" class="list-group-item list-group-item-action">HTML/CSS Tutorial Pt 2</a>
+                  <a href="https://randal-sean-harrison.github.io/workshop-html-css/" class="list-group-item list-group-item-action">Intro to HTML+CSS &nbsp; <span class="opacity-50">(notes only &mdash; no need to review closely)</span></a>
+                  <a href="https://randal-sean-harrison.github.io/workshop-bootstrapr/" class="list-group-item list-group-item-action">Creating & Hosting a Site &nbsp; <span class="opacity-50">(notes only &mdash; no need to review closely)</span></a>
+
+                </ul>
+
+              </div>
+            </div>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="assignments.html" class="list-group-item list-group-item-action" target="_blank">Data Dashboard assignment</a>
+                </ul>
+              </div>
+            </div>
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">25th</span></h4>
+
+            <!-- No class -->
+            <div class="card bg-striped border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-striped border-0 graphite"><strong><i class="fad fa-fw fa-2x fa-turkey mr-2"></i>Happy Holidays (no class)</strong></div>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div class="mt-3 ml-2 tab-pane fade" id="panel79950531" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">30th</span></h4>
+
+            <!-- Reading -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 graphite"><strong><i class="fad fa-fw fa-users-class fa-2x mr-2"></i>Practice Presentations</strong>
+                <p class="mt-3">Both teams will give a dress rehearsal practice presentation with feedback from the other team and the instructor.</p>
+              </div>
+            </div>
+
+
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Thursday<span class="ml-3 opacity-50">2nd</span></h4>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 graphite"><strong><i class="fad fa-fw fa-comments-alt fa-2x mr-2"></i>Final Review Day</strong>
+                <p class="mt-3">Course Review and preparation for the final presentation. Bring any final questions or conerns before we wrap the course.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mt-3 ml-2 tab-pane fade" id="panel7995053223" role="tabpanel" aria-labelledby="...">
+            <h3 class="mt-5 mb-2 d-none week-headers mb-4"><span class="fall-dates ml-2 chocolate"></span></h3>
+            <h4 class="bg-grey2 mb-3 shadow-sm py-3 pl-3 text-white">Tuesday<span class="ml-3 opacity-50">7th</span></h4>
+
+            <!-- Due  -->
+            <div class="card bg-white border-0 rounded-0 mb-3 shadow-sm">
+              <div class="card-header bg-white border-0 chocolate"><strong><i class="fad fa-fw fa-alarm-exclamation mr-2"></i>Due</strong></div>
+              <div class="card-body mt-0 pt-0">
+
+                <ul class="list-group list-group-flush">
+                  <a href="https://forms.gle/eAuyUtAXYN8QJJkf6" target="_blank" class="list-group-item list-group-item-action">Team evaluations (optional)</a>
+                  <a href="assignments.html" target="_blank" class="list-group-item list-group-item-action">Final Presentations</a>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- .row -->
+  </div>
+  <!-- container -->
+
+  <!-- Page footer -->
+  <div class="footer container-fluid bg-light-gray mt-5" id="page-footer"></div>
+
+  <!-- Back to top button -->
+  <a role="button" id="back-to-top" class="btn"><i class="fad fa-fw fa-3x fa-angle-up" aria-hidden="true"></i></a>
+
+</body>
+
+</html>
