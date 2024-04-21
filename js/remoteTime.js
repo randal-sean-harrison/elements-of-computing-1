@@ -1,5 +1,5 @@
-(function($) {
-    $.fn.remoteTime = function(rtParams){
+(function ($) {
+	$.fn.remoteTime = function (rtParams) {
 
 		/**
 		 * The main function that is instantiated on each element in the group
@@ -7,9 +7,9 @@
 		 * @param {Object} params - object containing parameters
 		 * @returns {remoteTime}
 		 */
-		function remoteTime(element, params){
+		function remoteTime(element, params) {
 			// From input parameters
-			var key = params.hasOwnProperty("key") ? params.key : "AIzaSyDSDJ7_CO-v3xr8nIOtBUXvw_I_PpDTO8A";
+			var key = params.hasOwnProperty("key") ? params.key : "";
 			var location = params.hasOwnProperty("location") ? params.location : "South Bend, Indiana";
 			var format = params.hasOwnProperty("format") ? params.format : "m/d/y g:i a";
 
@@ -29,8 +29,8 @@
 			this.interval = false;
 
 			var _this = this;
-			geocode(_this).then(function(){
-				getOffsets(_this).then(function(){
+			geocode(_this).then(function () {
+				getOffsets(_this).then(function () {
 					startClock(_this);
 				});
 			});
@@ -41,10 +41,10 @@
 		 * @param {remoteTime} _this - A remoteTime instance
 		 * @returns {undefined}
 		 */
-		function startClock(_this){
-			_this.interval = setInterval(function(){
+		function startClock(_this) {
+			_this.interval = setInterval(function () {
 				// check the time offset again ever hour
-				if(_this.lastOffsetCheck + (60 * 60) < (new Date().getTime() / 1000)) getOffsets(_this);
+				if (_this.lastOffsetCheck + (60 * 60) < (new Date().getTime() / 1000)) getOffsets(_this);
 				var realTime = (new Date().getTime() / 1000) + _this.dstOffset + _this.rawOffset;
 				var date = new Date(realTime * 1000);
 				var formatted = formatDate(date, _this.format);
@@ -65,8 +65,8 @@
 			var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 			var buffer = [];
-			for(var i=0; i<format.length; i++){
-				switch(format[i]){
+			for (var i = 0; i < format.length; i++) {
+				switch (format[i]) {
 					// If the current char is a "\" then skip it and add then next literal char
 					case "\\": buffer.push(format[++i]); break;
 
@@ -97,12 +97,12 @@
 					// Ordinal suffix
 					case "S":
 						var suffix = false;
-						var ones = buffer[buffer.length-1];
-						var tens = buffer[buffer.length-2];
-						if(ones == "1") suffix = "st";
-						if(ones == "2") suffix = "nd";
-						if(ones == "3") suffix = "rd";
-						if(tens == "1" || !suffix) suffix = "th";
+						var ones = buffer[buffer.length - 1];
+						var tens = buffer[buffer.length - 2];
+						if (ones == "1") suffix = "st";
+						if (ones == "2") suffix = "nd";
+						if (ones == "3") suffix = "rd";
+						if (tens == "1" || !suffix) suffix = "th";
 						buffer.push(suffix);
 						break;
 
@@ -118,19 +118,19 @@
 		 * @param {remoteTime} _this - A remoteTime instance
 		 * @returns {Promise}
 		 */
-		function getOffsets(_this){
-			return new Promise(function(done){
-				if(!_this.lat || !_this.lng) return done();
+		function getOffsets(_this) {
+			return new Promise(function (done) {
+				if (!_this.lat || !_this.lng) return done();
 				var timestamp = new Date().getTime() / 1000;
 				$.ajax({
 					url: "https://maps.googleapis.com/maps/api/timezone/json",
 					data: {
 						key: _this.key,
-						location: _this.lat+","+_this.lng,
+						location: _this.lat + "," + _this.lng,
 						timestamp: timestamp
 					}
-				}).done(function(results){
-					if(results.status === "OK"){
+				}).done(function (results) {
+					if (results.status === "OK") {
 						_this.dstOffset = results.dstOffset;
 						_this.rawOffset = results.rawOffset;
 					}
@@ -145,16 +145,16 @@
 		 * @param {remoteTime} _this - A remoteTime instance
 		 * @returns {Promise}
 		 */
-		function geocode(_this){
-			return new Promise(function(done){
+		function geocode(_this) {
+			return new Promise(function (done) {
 				$.ajax({
 					url: "https://maps.google.com/maps/api/geocode/json",
 					data: {
 						key: _this.key,
 						address: _this.location
 					}
-				}).done(function(results){
-					if(results.status === "OK"){
+				}).done(function (results) {
+					if (results.status === "OK") {
 						_this.lat = results.results[0].geometry.location.lat;
 						_this.lng = results.results[0].geometry.location.lng;
 					}
@@ -163,10 +163,10 @@
 			});
 		}
 
-		return this.each(function() {
+		return this.each(function () {
 			if ($(this).data('rtInstance') === undefined)
 				$(this).data('rtInstance', new remoteTime(this, rtParams));
 		});
-    };
+	};
 
 })(jQuery);
